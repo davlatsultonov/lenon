@@ -1,5 +1,14 @@
 .container {
   padding: 30px;
-  height: 200px;
   border-bottom: 2px solid #d5d5d5;
+
+  &__column {
+    display: inline-block;
+    width: 47%;
+    background-color: #e0ccbd;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
 }
