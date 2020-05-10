@@ -5,6 +5,7 @@
   }
 
   &__item {
+    vertical-align: middle;
     height: 30px;
     background-color: #ffffff;
     color: #000;
@@ -22,8 +23,13 @@
       cursor: pointer;
     }
 
+    &.active:hover{
+      opacity: 1;
+    }
+
     &_sm {
       width: 48px;
+      text-transform: uppercase;
     }
 
     &_md {
