@@ -1,0 +1,19 @@
+.column-link {
+  color: $active-color;
+  position: relative;
+  right: 28%;
+  float: right;
+
+  &__icon {
+    display: inline-block;
+    width: 17px;
+    height: 13px;
+    position: absolute;
+    right: -21px;
+
+    &.icon-eye {
+      background-image: url("../images/icons/eye.svg");
+      background-size: 17px 13px;
+    }
+  }
+}
