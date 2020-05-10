@@ -1,10 +1,18 @@
 .product-style {
 
+  &_patterns {
+
+    .product-style__item {
+      margin-bottom: 10px;
+    }
+  }
+
   &__item {
     display: inline-block;
+    vertical-align: middle;
 
-    &:not(:last-child) {
-      margin-right: 16px;
+    &:not(:nth-child(5n)) {
+      margin-right: 15px;
     }
   }
 
@@ -15,11 +23,23 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     border: none;
-
-
+    cursor: pointer;
 
     &.active {
       background-position: 14px 8px;
+    }
+  }
+
+  &__link {
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    padding-top: 15px;
+
+    > a {
+      font-size: 14px;
+      color: #000000;
+      white-space: pre-line;
     }
   }
 
