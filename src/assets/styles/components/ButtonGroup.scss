@@ -17,6 +17,7 @@
     font-size: 12px;
     font-weight: 500;
     transition: $opacity-transition;
+    padding: 0;
 
     &:hover {
       opacity: $base-opacity;
@@ -39,6 +40,17 @@
     &:not(:last-child) {
       margin-right: 10px;
     }
+
+  }
+
+  .item-preview {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    border-left: 1px solid #d5d5d5;
+    position: relative;
+    right: -4px;
+    padding: 6px 0 0 7px;
   }
 
 }
