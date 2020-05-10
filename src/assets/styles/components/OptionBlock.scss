@@ -8,8 +8,9 @@
 
     &_md {
       font-size: 14px;
-      padding-top: 20px;
       color: #000000;
+      padding-top: 12px;
+      padding-bottom: 10px;
     }
 
     &_xs {
@@ -19,12 +20,22 @@
     }
   }
 
-  &__body {
+  &__content {
     padding: 8px 0 14px;
 
-    .product-note__description {
-      width: 100%;
-      margin-bottom: 10px;
+
+    .product-note {
+      &:not(:last-child) {
+        .product-note__description {
+          margin-bottom: 13px;
+        }
+      }
+
+      &__description {
+        width: 100%;
+      }
+
+
     }
 
     &:last-child {
