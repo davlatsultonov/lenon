@@ -21,8 +21,8 @@ module.exports = {
                     loader: "file-loader",
                     options: {
                         esModule: false,
-                        name: "[name].[hash].[ext]",
-                        outputPath: "imgs"
+                        name: "[name].[ext]",
+                        outputPath: "images/icons"
                     }
                 }
             },

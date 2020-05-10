@@ -15,6 +15,12 @@
     box-shadow: $button-shadow;
     font-size: 12px;
     font-weight: 500;
+    transition: $opacity-transition;
+
+    &:hover {
+      opacity: $base-opacity;
+      cursor: pointer;
+    }
 
     &_sm {
       width: 48px;

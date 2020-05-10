@@ -1,14 +1,23 @@
 .color-picker {
-  width: 72%;
+  width: 73%;
 
   &__item {
     display: inline-block;
     width: 24px;
     height: 24px;
-    margin-right: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     border-radius: 2px;
     position: relative;
+    transition: $opacity-transition;
+
+    &:hover {
+      opacity: $base-opacity;
+      cursor: pointer;
+    }
+
+    &:not(:nth-child(7n)) {
+      margin-right: 14px;
+    }
 
     &.checked {
 
