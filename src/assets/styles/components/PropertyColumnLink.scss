@@ -1,0 +1,33 @@
+.column-link {
+  color: $active-color;
+  position: relative;
+  right: 28%;
+  float: right;
+  font-weight: 400;
+
+  &.icon-play {
+
+    > img {
+      height: 11px;
+      right: -20px;
+      top: 3px;
+    }
+  }
+
+  &.icon-eye {
+
+    > img {
+      width: 17px;
+      height: 13px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 23px;
+    height: 13px;
+    position: absolute;
+    right: -24px;
+    top: 1px;
+  }
+}

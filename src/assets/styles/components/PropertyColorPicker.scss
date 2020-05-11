@@ -1,0 +1,57 @@
+.color-picker {
+  width: 73%;
+
+  &__container {
+    margin-top: 10px;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 7px;
+    border-radius: 2px;
+    position: relative;
+    transition: $opacity-transition;
+
+    &:hover {
+      opacity: $base-opacity;
+      cursor: pointer;
+    }
+
+    &:not(:nth-child(7n)) {
+      margin-right: 14px;
+    }
+
+    &.checked {
+
+      .color-picker__icon {
+        display: block;
+        padding-top: 3px;
+        padding-left: 5px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -12%;
+        left: -12%;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $active-color;
+        border-radius: 5px;
+      }
+
+      &::after {
+        content: '';
+        width: 14px;
+        height: 10px;
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        background: url("../images/icons/checked.svg") no-repeat;
+      }
+
+    }
+  }
+}
