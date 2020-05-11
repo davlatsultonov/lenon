@@ -3,25 +3,25 @@
   position: relative;
   right: 28%;
   float: right;
+  font-weight: 400;
 
   &__icon {
     display: inline-block;
     width: 23px;
     height: 13px;
     position: absolute;
-    right: -22px;
-    background-repeat: no-repeat;
-    background-position-x: 6px;
+    right: -24px;
+    top: 1px;
 
     &.icon-eye {
-      background-image: url("../images/icons/eye.svg");
-      background-size: 17px 13px;
+      width: 17px;
+      height: 13px;
     }
 
     &.icon-play {
-      background-image: url("../images/icons/play.svg");
-      background-size: 9px 11px;
-      background-position-y: 2px;
+      height: 11px;
+      right: -20px;
+      top: 3px;
     }
   }
 }

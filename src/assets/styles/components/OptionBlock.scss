@@ -4,32 +4,33 @@
     color: #343434;
     font-size: 16px;
     font-weight: 500;
-    padding-top: 2px;
+    line-height: 22px;
 
     &_md {
       font-size: 14px;
       color: #000000;
-      padding-top: 12px;
+      padding-top: 8px;
       padding-bottom: 10px;
+      line-height: 17px;
     }
 
     &_xs {
       font-size: 12px;
-      padding-bottom: 10px;
+      padding-bottom: 9px;
       font-weight: bold;
+      line-height: 14px;
     }
   }
 
   &__content {
-    padding: 8px 0 14px;
+    padding: 12px 0 14px;
 
 
     .product-note {
-      &:not(:last-child) {
         .product-note__description {
           margin-bottom: 13px;
         }
-      }
+
 
       &__description {
         width: 100%;

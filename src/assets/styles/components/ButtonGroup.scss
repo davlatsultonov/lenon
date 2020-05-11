@@ -1,11 +1,7 @@
 .btn-group {
 
-  &__items {
-    margin-bottom: 14px;
-  }
-
   &__item {
-    vertical-align: middle;
+    vertical-align: top;
     height: 31px;
     background-color: #ffffff;
     color: #000;
@@ -23,12 +19,18 @@
       cursor: pointer;
     }
 
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
     &.active {
 
       .item-preview {
         vertical-align: sub;
         height: 27px;
         padding-top: 7px;
+        padding-left: 8px;
+        right: -8px;
       }
 
       &:hover{
@@ -36,31 +38,53 @@
       }
     }
 
+    &.disabled {
+      opacity: 0.5;
+    }
 
-    &_sm {
+    .item-preview {
+      display: inline-block;
+      vertical-align: middle;
+      height: 31px;
+      border-left: 1px solid #d5d5d5;
+      position: relative;
+      right: -7px;
+      padding-top: 9px;
+      padding-left: 9px;
+    }
+
+
+    &_xs {
       width: 48px;
       text-transform: uppercase;
+      padding: 0;
+    }
+
+    &_sm {
+      width: 105px;
     }
 
     &_md {
-      width: 105px;
+      width: 146px;
+      padding: 0;
+
+     .item-preview {
+        right: -27px;
+      }
+    }
+
+    &_lg {
+      width: 219px;
+
+      .item-preview {
+        right: -12px;
+      }
     }
 
     &:not(:last-child) {
       margin-right: 10px;
     }
 
-  }
-
-  .item-preview {
-    display: inline-block;
-    vertical-align: middle;
-    height: 31px;
-    border-left: 1px solid #d5d5d5;
-    position: relative;
-    right: -7px;
-    padding-top: 9px;
-    padding-left: 9px;
   }
 
 }
