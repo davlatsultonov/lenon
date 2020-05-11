@@ -1,7 +1,10 @@
 .container {
   padding: 20px 30px 20px;
-  border-bottom: 1px solid #d5d5d5;
   overflow: hidden;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #d5d5d5;
+  }
 
   &__column {
     float: left;

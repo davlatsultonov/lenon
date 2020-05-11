@@ -1,7 +1,35 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 40px;
+  padding-top: 6px;
 
+  &__column {
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
 
+    &_md {
+      width: 40%;
+      float: right;
+    }
+  }
+
+  &__total-result {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    font-weight: 900;
+  }
+
+  &__note {
+    width: 37%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 15px;
+    font-size: 12px;
+  }
+
+  &__btn-group {
+    float: right;
+    padding-top: 6px;
+  }
 }

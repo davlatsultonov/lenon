@@ -1,6 +1,10 @@
 .color-picker {
   width: 73%;
 
+  &__container {
+    margin-top: 10px;
+  }
+
   &__item {
     display: inline-block;
     width: 24px;

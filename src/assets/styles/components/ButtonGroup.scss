@@ -81,6 +81,15 @@
       opacity: 0.5;
     }
 
+    &-result {
+      padding: 13px 18px 14px;
+      text-decoration: none;
+
+      &_dark {
+        background-color: #606060;
+        color: #ffffff;
+      }
+    }
 
   }
 
