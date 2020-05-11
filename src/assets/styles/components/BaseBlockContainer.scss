@@ -7,8 +7,13 @@
   }
 
   &__column {
-    float: left;
     width: 48%;
+    display: inline-block;
+    vertical-align: top;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
 
     &_fluid {
       width: 100%;
@@ -16,19 +21,13 @@
       float: none;
     }
 
-    &:first-child {
-      margin-right: 22px;
-    }
-
     &_sm {
-      width: 31%;
-      display: inline-block;
-      vertical-align: top;
-      float: none;
-
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
+      width: 235px;
     }
+
+    &_md {
+      width: 265px;
+    }
+
   }
 }

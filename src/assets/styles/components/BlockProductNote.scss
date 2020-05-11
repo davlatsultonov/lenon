@@ -19,6 +19,11 @@
     .column-link {
       float: none;
       right: 0;
+
+      &.icon-play {
+        left: -101px;
+        top: 26px;
+      }
     }
   }
 }
