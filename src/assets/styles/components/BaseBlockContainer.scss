@@ -19,5 +19,16 @@
     &:first-child {
       margin-right: 22px;
     }
+
+    &_sm {
+      width: 31%;
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
   }
 }
