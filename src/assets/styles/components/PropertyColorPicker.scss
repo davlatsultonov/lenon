@@ -34,10 +34,10 @@
       &::before {
         content: '';
         position: absolute;
-        top: -12%;
+        top: -3px;
         left: -12%;
-        width: 30px;
-        height: 30px;
+        width: 26px;
+        height: 26px;
         border: 2px solid $active-color;
         border-radius: 5px;
       }
@@ -49,7 +49,7 @@
         position: absolute;
         top: 7px;
         left: 5px;
-        background: url("../images/icons/checked.svg") no-repeat;
+        background: url("assets/images/icons/checked.svg") no-repeat;
       }
 
     }
