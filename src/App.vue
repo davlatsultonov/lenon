@@ -491,7 +491,12 @@
                                     <button type="button" class="btn-group__item ">
                                         В боковых швах
 
-                                        <popover></popover>
+                                        <popover>
+                                            <template slot="slide-items">
+                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                                <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            </template>
+                                        </popover>
                                     </button>
                                 </div>
                             </div>

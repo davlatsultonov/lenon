@@ -10,9 +10,32 @@
                   }
                 }">
 
-        <div class="popper popover">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, est incidunt ipsum iusto maxime
-            obcaecati pariatur quibusdam quisquam repellendus soluta!
+        <div class="popper popover" >
+
+            <div class="popover__header">
+                <div class="option-block__title">
+                    Платок
+                </div>
+
+                <div class="popover__close" >
+                    Закрыть
+                    <div class="popover__close-icon">
+                        <img src="../assets/images/icons/close.svg" alt="close-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-slider">
+
+                <div class="product-slider__item product-slider__item_full-height">
+                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
+                        <slot name="slide-items">
+                            <div class="product-slider__img"><img src="../assets/images/popover-img.png"/></div>
+                        </slot>
+                    </VueSlickCarousel>
+                </div>
+
+            </div>
 
         </div>
 
@@ -23,17 +46,19 @@
 </template>
 
 <script>
+    import VueSlickCarousel from 'vue-slick-carousel'
     import Popper from 'vue-popperjs';
 
     export default {
         name: "Popover",
         components: {
+            VueSlickCarousel,
             'popper': Popper
         }
     }
 </script>
 
-<style scoped >
+<style lang="scss" scoped>
     .popper.popover {
         display: inline-block;
         box-sizing: border-box;
@@ -46,5 +71,35 @@
         padding: 50px 34px;
         left: 7px !important;
         top: -6px!important;
+
+        .product-slider {
+            width: 251px;
+            height: 375px;
+        }
+
+        .popover__header {
+            position: relative;
+
+            .option-block__title, .popover__close{
+                position: absolute;
+            }
+
+            .option-block__title {
+                top: -35px;
+            }
+
+            .popover__close {
+                right: -22px;
+                top: -38px;
+                font-size: 12px;
+
+                &-icon {
+                    margin-left: 2px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+
     }
 </style>
