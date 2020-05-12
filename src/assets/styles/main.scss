@@ -3,19 +3,19 @@
 @import 'common/variables';
 @import "common/mixins";
 @import "common/slickfix";
-@import "components/OptionBlock";
-@import "components/BaseBlockContainer";
-@import "components/Header";
-@import "components/Footer";
-@import "components/ProductSlider";
-@import "components/PropertyProductStyle";
-@import "components/PropertyColorPicker";
-@import "components/PropertyColumnLink";
-@import "components/ButtonGroup";
-@import "components/InputGroup";
-@import "components/BlockProductNote";
-@import "components/BlockSelectionResult";
-@import "components/BlockResultList";
+@import "components/option-block";
+@import "components/сontainer";
+@import "components/header";
+@import "components/footer";
+@import "components/product-slider";
+@import "components/product-style";
+@import "components/color-picker";
+@import "components/column-link";
+@import "components/btn-group";
+@import "components/input-group";
+@import "components/product-note";
+@import "components/selection-result";
+@import "components/result-list";
 @import 'common/global';
 
 

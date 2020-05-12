@@ -751,5 +751,5 @@ export default {
 </script>
 
 <style lang="scss">
-    @import './assets/styles/common/custom.scss';
+    @import "./assets/styles/main";
 </style>
