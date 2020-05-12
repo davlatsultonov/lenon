@@ -16,15 +16,18 @@
 
                         <div class="product-slider__item product-slider__item_upper">
                             <VueSlickCarousel :arrows="true" :fade="true" :infinite="true">
-                                <div class="product-slider__img"><img src="./assets/images/upper-part.png" /></div>
-                                <div class="product-slider__img"><img src="./assets/images/upper-white.png" width="100%" height="533"/></div>
+                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                <div class="product-slider__img"><img src="./assets/images/upper-white.png" width="100%"
+                                                                      height="533"/></div>
                             </VueSlickCarousel>
                         </div>
 
-                        <div class="product-slider__item product-slider__item_lower" >
+                        <div class="product-slider__item product-slider__item_lower">
                             <VueSlickCarousel :arrows="true" :fade="true">
-                                <div class="product-slider__img"><div style="width: 100%; height: 100%; background-color: #353228"></div></div>
-                                <div class="product-slider__img"><img src="./assets/images/lower-part.png" /></div>
+                                <div class="product-slider__img">
+                                    <div style="width: 100%; height: 100%; background-color: #353228"></div>
+                                </div>
+                                <div class="product-slider__img"><img src="./assets/images/lower-part.png"/></div>
                             </VueSlickCarousel>
                         </div>
 
@@ -424,28 +427,18 @@
                                     </button>
 
                                     <div class="btn-group">
-                                        <button type="button" class="btn-group__item active">
-                                            3/4
-                                            <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
-                                        </button>
 
                                         <button type="button" class="btn-group__item ">
 
                                             До талии
 
-                                            <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                            <popover></popover>
                                         </button>
 
                                         <button type="button" class="btn-group__item ">
                                             Всю длину
 
-                                            <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                            <popover></popover>
                                         </button>
                                     </div>
 
@@ -456,17 +449,13 @@
                                     <button type="button" class="btn-group__item ">
                                         Стойка
 
-                                        <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                        <popover></popover>
                                     </button>
 
                                     <button type="button" class="btn-group__item ">
                                         Английский
 
-                                        <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                        <popover></popover>
                                     </button>
 
                                     <div class="option-block__title option-block__title_sm">
@@ -476,17 +465,13 @@
                                     <button type="button" class="btn-group__item ">
                                         3/4
 
-                                        <span class="btn-group__item-preview" @click="toggle = !toggle">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                        <popover></popover>
                                     </button>
 
                                     <button type="button" class="btn-group__item ">
                                         Стандартные
 
-                                        <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                        <popover></popover>
                                     </button>
 
                                     <div class="option-block__title option-block__title_sm">
@@ -496,9 +481,7 @@
                                     <button type="button" class="btn-group__item ">
                                         В боковых швах
 
-                                        <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                        <popover></popover>
                                     </button>
 
                                     <div class="option-block__title option-block__title_sm">
@@ -508,9 +491,7 @@
                                     <button type="button" class="btn-group__item ">
                                         В боковых швах
 
-                                        <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                        <popover></popover>
                                     </button>
                                 </div>
                             </div>
@@ -533,17 +514,13 @@
                                 <button type="button" class="btn-group__item">
                                     Декоративный кармашек
 
-                                    <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                    <popover></popover>
                                 </button>
 
                                 <button type="button" class="btn-group__item">
                                     Поясок
 
-                                    <span class="btn-group__item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
+                                    <popover></popover>
                                 </button>
                             </div>
                         </div>
@@ -730,11 +707,14 @@
 
 <script>
     import VueSlickCarousel from 'vue-slick-carousel'
+    import Popover from './components/Popover'
+
 
     export default {
         name: 'App',
         components: {
-            VueSlickCarousel
+            VueSlickCarousel,
+            'popover': Popover
         }
     }
 
@@ -743,4 +723,6 @@
 
 <style lang="scss">
     @import "./assets/styles/main";
+
+
 </style>
