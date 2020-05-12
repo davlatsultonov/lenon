@@ -13,10 +13,10 @@
     font-weight: 500;
     transition: $opacity-transition;
     padding: 0 16px;
+    margin-bottom: 14px;
 
     &:not(:last-child) {
       margin-right: 10px;
-      margin-bottom: 14px;
     }
 
     &:hover {
@@ -24,7 +24,7 @@
       cursor: pointer;
     }
 
-    .item-preview {
+    &-preview {
       display: inline-block;
       vertical-align: middle;
       height: 22px;
@@ -36,35 +36,18 @@
     }
 
     &_xs {
-      width: 48px;
+      min-width: 48px;
       text-transform: uppercase;
-      padding: 0;
+      padding: 0 5px;
     }
 
     &_sm {
-      width: 105px;
-    }
-
-    &_md {
-      width: 146px;
-      padding: 0;
-
-      .item-preview {
-        right: -27px;
-      }
-    }
-
-    &_lg {
-      width: 219px;
-
-      .item-preview {
-        right: -12px;
-      }
+      min-width: 105px;
     }
 
     &.active {
 
-      .item-preview {
+      .btn-group__item-preview {
         vertical-align: sub;
         height: 20px;
         padding-top: 7px;

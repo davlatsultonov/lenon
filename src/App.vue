@@ -399,7 +399,7 @@
                                         <button type="button" class="btn-group__item active">
                                             3/4
 
-                                            <span class="item-preview">
+                                            <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                         </button>
@@ -407,7 +407,7 @@
                                         <button type="button" class="btn-group__item ">
                                             До талии
 
-                                            <span class="item-preview">
+                                            <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                         </button>
@@ -415,7 +415,7 @@
                                         <button type="button" class="btn-group__item ">
                                             Всю длину
 
-                                            <span class="item-preview">
+                                            <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                         </button>
@@ -428,7 +428,7 @@
                                     <button type="button" class="btn-group__item ">
                                         Стойка
 
-                                        <span class="item-preview">
+                                        <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -436,7 +436,7 @@
                                     <button type="button" class="btn-group__item ">
                                         Английский
 
-                                        <span class="item-preview">
+                                        <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -448,7 +448,7 @@
                                     <button type="button" class="btn-group__item ">
                                         3/4
 
-                                        <span class="item-preview">
+                                        <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -456,7 +456,7 @@
                                     <button type="button" class="btn-group__item ">
                                         Стандартные
 
-                                        <span class="item-preview">
+                                        <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -468,7 +468,7 @@
                                     <button type="button" class="btn-group__item ">
                                         В боковых швах
 
-                                        <span class="item-preview">
+                                        <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -480,7 +480,7 @@
                                     <button type="button" class="btn-group__item ">
                                         В боковых швах
 
-                                        <span class="item-preview">
+                                        <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -502,65 +502,25 @@
 
                         <div class="btn-group">
                             <div class="btn-group__items">
-                                <button type="button" class="btn-group__item btn-group__item_lg">
+                                <button type="button" class="btn-group__item">
                                     Декоративный кармашек
 
-                                    <span class="item-preview">
+                                    <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                 </button>
 
-                                <button type="button" class="btn-group__item btn-group__item_md">
+                                <button type="button" class="btn-group__item">
                                     Поясок
 
-                                    <span class="item-preview">
+                                    <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                 </button>
                             </div>
                         </div>
 
-                        <div class="btn-group">
-                            <div class="btn-group__items">
-                                <button type="button" class="btn-group__item btn-group__item_lg">
-                                    Декоративный кармашек
-
-                                    <span class="item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
-                                </button>
-
-                                <button type="button" class="btn-group__item btn-group__item_md">
-                                    Поясок
-
-                                    <span class="item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="btn-group">
-                            <div class="btn-group__items">
-                                <button type="button" class="btn-group__item btn-group__item_lg">
-                                    Декоративный кармашек
-
-                                    <span class="item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
-                                </button>
-
-                                <button type="button" class="btn-group__item btn-group__item_md">
-                                    Поясок
-
-                                    <span class="item-preview">
-                                    <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="product-note">
+                        <div class="product-note margin-top-6">
                             <div class="product-note__description">
                                 Предложенные товары выше добавлять не обязательно, но возможно, то что мы можем изготовить
                                 дополнительно, Вам пригодится.
@@ -585,7 +545,7 @@
 
                             <div class="container__column container__column_sm">
 
-                                <div class="option-block__title option-block__title_sm">
+                                <div class="option-block__title" style="padding: 15px 0;">
                                     Базовые свойства
                                 </div>
 
@@ -608,7 +568,7 @@
                                             <li class="result-list__item">Прямое</li>
                                             <li class="result-list__item">
                                                 Графитовый
-                                                <span class="item-color"></span>
+                                                <span class="result-list__item_color"></span>
                                             </li>
                                             <li class="result-list__item">Горчичный</li>
                                             <li class="result-list__item">Без принта</li>
@@ -670,7 +630,7 @@
 
                         </div>
 
-                        <div class="option-block__title margin-bottom-15">
+                        <div class="option-block__title option-block__title_bold margin-bottom-15" >
                             Цена платья: <span>5 000</span> руб.
                         </div>
 
@@ -684,7 +644,7 @@
                                 Выберите аксессуары и фурнитуру дополнительно к платью выше.
                             </div>
 
-                            <div class="option-block__title">
+                            <div class="option-block__title option-block__title_bold">
                                 Цена всех дополнений: 0 руб.
                             </div>
 
@@ -703,7 +663,7 @@
                     <div class="footer__column">
                         <div class="option-block">
 
-                            <div class="option-block__title_lg footer__total-result">
+                            <div class="option-block__title option-block__title_lg footer__total-result">
                                 Итого: <span>5 000 руб.</span>
                             </div>
 
