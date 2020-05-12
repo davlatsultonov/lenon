@@ -30,21 +30,24 @@
 
                                     <div class="product-style__item">
                                         <button class="product-style__btn active">
-                                            <img class="product-style__icon" src="./assets/images/icons/straight.svg" alt="straight-icon">
+                                            <img class="product-style__icon" src="./assets/images/icons/straight.svg"
+                                                 alt="straight-icon">
                                         </button>
                                         <div class="product-style__text">Прямое</div>
                                     </div>
 
                                     <div class="product-style__item">
                                         <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/icons/trapezoid.svg" alt="trapezoid-icon">
+                                            <img class="product-style__icon" src="./assets/images/icons/trapezoid.svg"
+                                                 alt="trapezoid-icon">
                                         </button>
                                         <div class="product-style__text">Трапеция</div>
                                     </div>
 
                                     <div class="product-style__item">
                                         <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/icons/cutting.svg" alt="cutting-icon">
+                                            <img class="product-style__icon" src="./assets/images/icons/cutting.svg"
+                                                 alt="cutting-icon">
                                         </button>
                                         <div class="product-style__text">Отрезное</div>
                                     </div>
@@ -117,46 +120,52 @@
                             <div class="product-style product-style_patterns">
                                 <div class="product-style__item">
                                     <button class="product-style__btn active">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg" alt="pattern-icon">
+                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                             alt="pattern-icon">
                                     </button>
                                 </div>
-
 
 
                                 <div class="product-style__item">
@@ -181,8 +190,10 @@
                         </div>
 
                         <div class="product-note__description">
-                            Оптимально цвет принта совпадает с выбранным цветом юбки. Если платье однотонное, мы красим принт в
-                            наш базовый цвет. Если хотите индивидуальный цвет принта, напишите нам в комментарий к заказу.
+                            Оптимально цвет принта совпадает с выбранным цветом юбки. Если платье однотонное, мы красим
+                            принт в
+                            наш базовый цвет. Если хотите индивидуальный цвет принта, напишите нам в комментарий к
+                            заказу.
                         </div>
                     </div>
                 </div>
@@ -294,7 +305,8 @@
 
                             <div class="product-note margin-bottom-12">
                                 <div class="product-note__description">
-                                    Мы изготовим платье по вашим меркам. Есть видео-инструкция с рекомендациями, если возниктнут
+                                    Мы изготовим платье по вашим меркам. Есть видео-инструкция с рекомендациями, если
+                                    возниктнут
                                     вопросы.
                                     <a href="#" class="column-link">
                                         Смотреть
@@ -398,13 +410,13 @@
                                     <div class="btn-group">
                                         <button type="button" class="btn-group__item active">
                                             3/4
-
                                             <span class="btn-group__item-preview">
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                         </button>
 
                                         <button type="button" class="btn-group__item ">
+
                                             До талии
 
                                             <span class="btn-group__item-preview">
@@ -448,7 +460,8 @@
                                     <button type="button" class="btn-group__item ">
                                         3/4
 
-                                        <span class="btn-group__item-preview">
+                                        <span class="btn-group__item-preview" @click="toggle = !toggle">
+                                        <b-popover class="toggle"></b-popover>
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -522,7 +535,8 @@
 
                         <div class="product-note margin-top-6">
                             <div class="product-note__description">
-                                Предложенные товары выше добавлять не обязательно, но возможно, то что мы можем изготовить
+                                Предложенные товары выше добавлять не обязательно, но возможно, то что мы можем
+                                изготовить
                                 дополнительно, Вам пригодится.
                             </div>
                         </div>
@@ -630,7 +644,7 @@
 
                         </div>
 
-                        <div class="option-block__title option-block__title_bold margin-bottom-15" >
+                        <div class="option-block__title option-block__title_bold margin-bottom-15">
                             Цена платья: <span>5 000</span> руб.
                         </div>
 
@@ -647,7 +661,6 @@
                             <div class="option-block__title option-block__title_bold">
                                 Цена всех дополнений: 0 руб.
                             </div>
-
 
 
                         </div>
@@ -702,12 +715,12 @@
 
 <script>
 
-export default {
-  name: 'App',
-  components: {
+    export default {
+        name: 'App',
+        components: {
 
-  }
-}
+        }
+    }
 </script>
 
 <style lang="scss">
