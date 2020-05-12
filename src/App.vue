@@ -12,7 +12,23 @@
             <div class="container padding-top-30">
 
                 <div class="container__column">
-                    <div class="product-slider"></div>
+                    <div class="product-slider">
+
+                        <div class="product-slider__item product-slider__item_upper">
+                            <VueSlickCarousel :arrows="true" :fade="true" :infinite="true">
+                                <div class="product-slider__img"><img src="./assets/images/upper-part.png" /></div>
+                                <div class="product-slider__img"><img src="./assets/images/upper-white.png" width="100%" height="533"/></div>
+                            </VueSlickCarousel>
+                        </div>
+
+                        <div class="product-slider__item product-slider__item_lower" >
+                            <VueSlickCarousel :arrows="true" :fade="true">
+                                <div class="product-slider__img"><div style="width: 100%; height: 100%; background-color: #353228"></div></div>
+                                <div class="product-slider__img"><img src="./assets/images/lower-part.png" /></div>
+                            </VueSlickCarousel>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="container__column margin-right-0">
@@ -461,7 +477,6 @@
                                         3/4
 
                                         <span class="btn-group__item-preview" @click="toggle = !toggle">
-                                        <b-popover class="toggle"></b-popover>
                                     <img src="./assets/images/icons/eye.svg" alt="icon-eye">
                                 </span>
                                     </button>
@@ -714,13 +729,16 @@
 </template>
 
 <script>
+    import VueSlickCarousel from 'vue-slick-carousel'
 
     export default {
         name: 'App',
         components: {
-
+            VueSlickCarousel
         }
     }
+
+
 </script>
 
 <style lang="scss">
