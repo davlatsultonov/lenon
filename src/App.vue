@@ -245,6 +245,7 @@
                             <div class="option-block__title option-block__title_xs">
                                 Евро размер
 
+                                <info-popover></info-popover>
 
                                 <div class="column-link">
                                     <a href="#">
@@ -378,6 +379,8 @@
 
                             <div class="option-block__title option-block__title_xs">
                                 Ваш рост
+
+                                <info-popover></info-popover>
                             </div>
 
                             <div class="btn-group">
@@ -546,9 +549,9 @@
 
                                         <button type="button" class="btn-group__item ">
                                             Всю длину
-
                                             <popover></popover>
                                         </button>
+                                        <info-popover></info-popover>
                                     </div>
 
                                     <div class="option-block__title option-block__title_sm">
@@ -827,6 +830,8 @@
 
         </div>
 
+
+
     </div>
 
 </template>
@@ -834,13 +839,15 @@
 <script>
     import VueSlickCarousel from 'vue-slick-carousel'
     import Popover from './components/Popover'
+    import InfoPopover from './components/InfoPopover'
 
 
     export default {
         name: 'App',
         components: {
             VueSlickCarousel,
-            'popover': Popover
+            'popover': Popover,
+            'info-popover': InfoPopover
         }
     }
 

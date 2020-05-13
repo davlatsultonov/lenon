@@ -72,6 +72,8 @@
             'popper': Popper
         }
     }
+
+
 </script>
 
 <style lang="scss">
@@ -154,7 +156,6 @@
 
                 .product-style {
                     max-height: 330px;
-                    overflow: hidden;
 
                     &__btn {
                         vertical-align: sub;
