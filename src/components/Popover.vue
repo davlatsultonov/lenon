@@ -43,7 +43,10 @@
 
                 <slot name="popover__content_right"></slot>
 
-
+                <div class="btn-group">
+                    <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark ">Выбрать
+                        размер <span>M</span></a>
+                </div>
             </div>
 
         </div>
@@ -74,7 +77,7 @@
 <style lang="scss">
     .popover {
 
-     .popper {
+        .popper {
             display: inline-block;
             box-sizing: border-box;
             min-width: 319px;
@@ -105,7 +108,7 @@
             }
 
             .popover__close {
-                right: -22px;
+                right: -15px;
                 top: -38px;
                 font-size: 12px;
 
@@ -117,6 +120,10 @@
             }
         }
 
+        .btn-group {
+            display: none;
+        }
+
         &_size {
             .popper {
                 width: 550px;
@@ -124,6 +131,7 @@
             }
 
             .popover__content {
+                position: relative;
 
                 .product-slider {
                     float: left;
@@ -145,7 +153,16 @@
                 }
 
                 .product-style {
-                    float: left;
+                    max-height: 330px;
+                    overflow: hidden;
+
+                    &__btn {
+                        vertical-align: sub;
+                    }
+
+                    &__item {
+                        margin-bottom: 34px;
+                    }
 
                     &__item:not(:nth-child(5n)) {
                         margin-right: 0;
@@ -158,6 +175,13 @@
                     &__icon {
                         height: 44px;
                     }
+                }
+
+                .btn-group {
+                    display: block;
+                    position: fixed;
+                    right: 60px;
+                    bottom: 66px;
                 }
             }
         }

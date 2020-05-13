@@ -71,6 +71,10 @@
       &-dark {
         background-color: #606060;
         color: #ffffff;
+
+        &:hover {
+          background-color: #3d403d;
+        }
       }
     }
 

@@ -256,10 +256,13 @@
                                             <div class="product-slider">
 
                                                 <div class="product-slider__item product-slider__item_full-height">
-                                                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
+                                                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true"
+                                                                      :dots="true">
                                                         <slot name="slide-items">
-                                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
-                                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                                            <div class="product-slider__img"><img
+                                                                    src="./assets/images/popover-img.png"/></div>
+                                                            <div class="product-slider__img"><img
+                                                                    src="./assets/images/upper-part.png"/></div>
                                                         </slot>
                                                     </VueSlickCarousel>
                                                 </div>
@@ -268,34 +271,74 @@
                                         </template>
 
                                         <template #popover__content_right>
-                                            <div class="product-style">
-                                                <div class="product-style__items">
+                                            <div class="product-style ">
 
-                                                    <div class="product-style__item">
-                                                        <button class="product-style__btn active">
-                                                            <img class="product-style__icon" src="./assets/images/icons/popover-size-img.png"
-                                                                 alt="straight-icon">
-                                                        </button>
-                                                        <div class="product-style__text">M</div>
-                                                    </div>
+                                                <div class="product-style__item">
+                                                    <button class="product-style__btn active">
+                                                        <img class="product-style__icon"
+                                                             src="./assets/images/icons/popover-size-img.png"
+                                                             alt="straight-icon">
+                                                        <div class="product-style__checked"><span></span></div>
+                                                    </button>
 
-                                                    <div class="product-style__item">
-                                                        <button class="product-style__btn">
-                                                            <img class="product-style__icon" src="./assets/images/icons/popover-size-img.png"
-                                                                 alt="straight-icon">
-                                                        </button>
-                                                        <div class="product-style__text">S</div>
-                                                    </div>
-
-                                                    <div class="product-style__item">
-                                                        <button class="product-style__btn">
-                                                            <img class="product-style__icon" src="./assets/images/icons/popover-size-img.png"
-                                                                 alt="straight-icon">
-                                                        </button>
-                                                        <div class="product-style__text">S</div>
-                                                    </div>
-
+                                                    <div class="product-style__text">M</div>
                                                 </div>
+
+                                                <div class="product-style__item">
+                                                    <button class="product-style__btn">
+                                                        <img class="product-style__icon"
+                                                             src="./assets/images/icons/popover-size-img.png"
+                                                             alt="straight-icon">
+
+                                                        <div class="product-style__checked"><span></span></div>
+                                                    </button>
+                                                    <div class="product-style__text">S</div>
+                                                </div>
+
+                                                <div class="product-style__item">
+                                                    <button class="product-style__btn">
+                                                        <img class="product-style__icon"
+                                                             src="./assets/images/icons/popover-size-img.png"
+                                                             alt="straight-icon">
+
+                                                        <div class="product-style__checked"><span></span></div>
+                                                    </button>
+                                                    <div class="product-style__text">S</div>
+                                                </div>
+
+                                                <div class="product-style__item">
+                                                    <button class="product-style__btn">
+                                                        <img class="product-style__icon"
+                                                             src="./assets/images/icons/popover-size-img.png"
+                                                             alt="straight-icon">
+                                                        <div class="product-style__checked"><span></span></div>
+                                                    </button>
+
+                                                    <div class="product-style__text">M</div>
+                                                </div>
+
+                                                <div class="product-style__item">
+                                                    <button class="product-style__btn">
+                                                        <img class="product-style__icon"
+                                                             src="./assets/images/icons/popover-size-img.png"
+                                                             alt="straight-icon">
+
+                                                        <div class="product-style__checked"><span></span></div>
+                                                    </button>
+                                                    <div class="product-style__text">S</div>
+                                                </div>
+
+                                                <div class="product-style__item">
+                                                    <button class="product-style__btn">
+                                                        <img class="product-style__icon"
+                                                             src="./assets/images/icons/popover-size-img.png"
+                                                             alt="straight-icon">
+
+                                                        <div class="product-style__checked"><span></span></div>
+                                                    </button>
+                                                    <div class="product-style__text">S</div>
+                                                </div>
+
                                             </div>
                                         </template>
 
@@ -659,62 +702,63 @@
 
                             </div>
 
-                             <div class="container__column container__column_md">
+                            <div class="container__column container__column_md">
 
-                                 <div class="selection-result">
+                                <div class="selection-result">
 
-                                     <div class="option-block__title selection-result__title">
-                                         Индивидуальные размеры
-                                     </div>
+                                    <div class="option-block__title selection-result__title">
+                                        Индивидуальные размеры
+                                    </div>
 
-                                     <div class="selection-result__column">
-                                         <ul class="result-list">
-                                             <li class="result-list__item">Длина платья до талии:</li>
-                                             <li class="result-list__item">Длина всего платья от плеча:</li>
-                                             <li class="result-list__item">Обхват груди:</li>
-                                             <li class="result-list__item">Обхват талии:</li>
-                                             <li class="result-list__item">Обхват бедер:</li>
-                                             <li class="result-list__item">Обхват руки:</li>
-                                         </ul>
-                                     </div>
+                                    <div class="selection-result__column">
+                                        <ul class="result-list">
+                                            <li class="result-list__item">Длина платья до талии:</li>
+                                            <li class="result-list__item">Длина всего платья от плеча:</li>
+                                            <li class="result-list__item">Обхват груди:</li>
+                                            <li class="result-list__item">Обхват талии:</li>
+                                            <li class="result-list__item">Обхват бедер:</li>
+                                            <li class="result-list__item">Обхват руки:</li>
+                                        </ul>
+                                    </div>
 
-                                     <div class="selection-result__column">
-                                         <ul class="result-list">
-                                             <li class="result-list__item">60 см</li>
-                                             <li class="result-list__item">180 см</li>
-                                             <li class="result-list__item">92 см</li>
-                                             <li class="result-list__item">60 см</li>
-                                             <li class="result-list__item">60 см</li>
-                                             <li class="result-list__item">–</li>
-                                         </ul>
-                                     </div>
-                                 </div>
+                                    <div class="selection-result__column">
+                                        <ul class="result-list">
+                                            <li class="result-list__item">60 см</li>
+                                            <li class="result-list__item">180 см</li>
+                                            <li class="result-list__item">92 см</li>
+                                            <li class="result-list__item">60 см</li>
+                                            <li class="result-list__item">60 см</li>
+                                            <li class="result-list__item">–</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                             </div>
+                            </div>
 
-                             <div class="container__column container__column_sm">
+                            <div class="container__column container__column_sm">
 
-                                 <div class="product-note margin-bottom-12 margin-top-55">
-                                     <div class="product-note__description">
-                                         Проверьте внимательно указанные размеры перед окончательным оформлением заказа. Если сомневаетесь есть видео-инструкция с рекомендациями
+                                <div class="product-note margin-bottom-12 margin-top-55">
+                                    <div class="product-note__description">
+                                        Проверьте внимательно указанные размеры перед окончательным оформлением заказа.
+                                        Если сомневаетесь есть видео-инструкция с рекомендациями
 
-                                         <div class="column-link column-link_bottom">
-                                             <a href="#">
-                                                 Смотреть
-                                             </a>
+                                        <div class="column-link column-link_bottom">
+                                            <a href="#">
+                                                Смотреть
+                                            </a>
 
-                                             <popover>
-                                                 <template #popover__icon>
+                                            <popover>
+                                                <template #popover__icon>
                                                     <span class="column-link__icon icon-play">
                                                         <img src="./assets/images/icons/play.svg" alt="icon-play">
                                                     </span>
-                                                 </template>
-                                             </popover>
-                                         </div>
-                                     </div>
-                                 </div>
+                                                </template>
+                                            </popover>
+                                        </div>
+                                    </div>
+                                </div>
 
-                             </div>
+                            </div>
 
                         </div>
 

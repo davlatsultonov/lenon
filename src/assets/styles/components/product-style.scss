@@ -39,8 +39,25 @@
     border: none;
     cursor: pointer;
     padding-top: 4px;
+    position: relative;
 
+    &.active {
 
+      .product-style__checked {
+        > span{
+
+          &::before {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: black;
+            position: relative;
+            top: -4px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
   }
 
   &__link {
@@ -79,5 +96,22 @@
     font-size: 12px;
     text-align: center;
     padding-top: 5px;
+  }
+
+  &__checked {
+    > span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 2px solid #000000;
+      border-radius: 50%;
+      position: absolute;
+      margin-top: 27px;
+      margin-left: -7px;
+
+      &::before {
+        content: '';
+      }
+    }
   }
 }
