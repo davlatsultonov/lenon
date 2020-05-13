@@ -1,32 +1,25 @@
 .column-link {
-  color: $active-color;
+  display: inline-block;
   position: relative;
   right: -18%;
   font-weight: 400;
 
-  &.icon-play {
-
-    > img {
-      height: 11px;
-      right: -20px;
-      top: 3px;
-    }
-  }
-
-  &.icon-eye {
-
-    > img {
-      width: 17px;
-      height: 13px;
-    }
+  > a {
+    color: $active-color;
+    float: left;
+    margin-right: 6px;
   }
 
   &__icon {
     display: inline-block;
+    vertical-align: sub;
     width: 23px;
     height: 12px;
-    position: absolute;
-    right: -22px;
-    top: 1px;
+    cursor: pointer;
+
+
+    &.icon-play {
+      margin-left: -2px;
+    }
   }
 }

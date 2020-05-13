@@ -17,8 +17,7 @@
                         <div class="product-slider__item product-slider__item_upper">
                             <VueSlickCarousel :arrows="true" :fade="true" :infinite="true">
                                 <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                <div class="product-slider__img"><img src="./assets/images/upper-white.png" width="100%"
-                                                                      height="533"/></div>
+                                <div class="product-slider__img"><img src="./assets/images/upper-white.png"/></div>
                             </VueSlickCarousel>
                         </div>
 
@@ -245,10 +244,69 @@
 
                             <div class="option-block__title option-block__title_xs">
                                 Евро размер
-                                <a href="#" class="column-link icon-eye">
-                                    Примеры размеров
-                                    <img class="column-link__icon" src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                </a>
+
+
+                                <div class="column-link">
+                                    <a href="#">
+                                        Примеры размеров
+                                    </a>
+
+                                    <popover class="popover_size">
+                                        <template #popover__content_left>
+                                            <div class="product-slider">
+
+                                                <div class="product-slider__item product-slider__item_full-height">
+                                                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
+                                                        <slot name="slide-items">
+                                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                                        </slot>
+                                                    </VueSlickCarousel>
+                                                </div>
+
+                                            </div>
+                                        </template>
+
+                                        <template #popover__content_right>
+                                            <div class="product-style">
+                                                <div class="product-style__items">
+
+                                                    <div class="product-style__item">
+                                                        <button class="product-style__btn active">
+                                                            <img class="product-style__icon" src="./assets/images/icons/popover-size-img.png"
+                                                                 alt="straight-icon">
+                                                        </button>
+                                                        <div class="product-style__text">M</div>
+                                                    </div>
+
+                                                    <div class="product-style__item">
+                                                        <button class="product-style__btn">
+                                                            <img class="product-style__icon" src="./assets/images/icons/popover-size-img.png"
+                                                                 alt="straight-icon">
+                                                        </button>
+                                                        <div class="product-style__text">S</div>
+                                                    </div>
+
+                                                    <div class="product-style__item">
+                                                        <button class="product-style__btn">
+                                                            <img class="product-style__icon" src="./assets/images/icons/popover-size-img.png"
+                                                                 alt="straight-icon">
+                                                        </button>
+                                                        <div class="product-style__text">S</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </template>
+
+                                        <template #popover__icon>
+                                            <span class="column-link__icon icon-eye">
+                                                <img src="./assets/images/icons/eye.svg" alt="icon-eye">
+                                            </span>
+                                        </template>
+                                    </popover>
+                                </div>
+
                             </div>
 
                             <div class="btn-group">
@@ -327,11 +385,19 @@
                                     Мы изготовим платье по вашим меркам. Есть видео-инструкция с рекомендациями, если
                                     возниктнут
                                     вопросы.
-                                    <a href="#" class="column-link">
-                                        Смотреть
-                                        <img class="column-link__icon" src="./assets/images/icons/play.svg"
-                                             alt="icon-eye">
-                                    </a>
+                                    <div class="column-link" style="right: 0;">
+                                        <a href="#">
+                                            Смотреть
+                                        </a>
+
+                                        <popover>
+                                            <template #popover__icon>
+                                                <span class="column-link__icon icon-play">
+                                                    <img src="./assets/images/icons/play.svg" alt="icon-play">
+                                                </span>
+                                            </template>
+                                        </popover>
+                                    </div>
                                 </div>
                             </div>
 
@@ -492,9 +558,11 @@
                                         В боковых швах
 
                                         <popover>
-                                            <template slot="slide-items">
-                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                                <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            <template #slide-items>
+                                                <div class="product-slider__img"><img
+                                                        src="./assets/images/upper-part.png"/></div>
+                                                <div class="product-slider__img"><img
+                                                        src="./assets/images/popover-img.png"/></div>
                                             </template>
                                         </popover>
                                     </button>
@@ -556,11 +624,10 @@
 
                             <div class="container__column container__column_sm">
 
-                                <div class="option-block__title" style="padding: 15px 0;">
-                                    Базовые свойства
-                                </div>
-
                                 <div class="selection-result">
+                                    <div class="option-block__title selection-result__title">
+                                        Базовые свойства
+                                    </div>
 
                                     <div class="selection-result__column">
                                         <ul class="result-list">
@@ -592,13 +659,13 @@
 
                             </div>
 
-                            <!-- <div class="container__column container__column_md">
-
-                                 <div class="option-block__title option-block__title_sm">
-                                     Индивидуальные размеры
-                                 </div>
+                             <div class="container__column container__column_md">
 
                                  <div class="selection-result">
+
+                                     <div class="option-block__title selection-result__title">
+                                         Индивидуальные размеры
+                                     </div>
 
                                      <div class="selection-result__column">
                                          <ul class="result-list">
@@ -627,17 +694,27 @@
 
                              <div class="container__column container__column_sm">
 
-                                 <div class="product-note margin-bottom-12 margin-top-35">
+                                 <div class="product-note margin-bottom-12 margin-top-55">
                                      <div class="product-note__description">
                                          Проверьте внимательно указанные размеры перед окончательным оформлением заказа. Если сомневаетесь есть видео-инструкция с рекомендациями
-                                         <a href="#" class="column-link icon-play">
-                                             Смотреть
-                                             <img class="column-link__icon" src="./assets/images/icons/play.svg" alt="icon-eye">
-                                         </a>
+
+                                         <div class="column-link column-link_bottom">
+                                             <a href="#">
+                                                 Смотреть
+                                             </a>
+
+                                             <popover>
+                                                 <template #popover__icon>
+                                                    <span class="column-link__icon icon-play">
+                                                        <img src="./assets/images/icons/play.svg" alt="icon-play">
+                                                    </span>
+                                                 </template>
+                                             </popover>
+                                         </div>
                                      </div>
                                  </div>
 
-                             </div>-->
+                             </div>
 
                         </div>
 
@@ -688,11 +765,11 @@
 
                         <div class="btn-group footer__btn-group">
 
-                            <a href="#" class="btn-group__item btn-group__item-result">
+                            <a href="#" class="btn-group__item btn-group__item_result">
                                 Отправить на e-mail
                             </a>
 
-                            <a href="#" class="btn-group__item btn-group__item-result btn-group__item-result_dark">
+                            <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark">
                                 Добавить в корзину
                             </a>
 

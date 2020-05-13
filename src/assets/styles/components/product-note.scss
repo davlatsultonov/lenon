@@ -15,15 +15,11 @@
     width: 95%;
     font-size: 12px;
     line-height: 16px;
-    
-    .column-link {
-      float: none;
-      right: 0;
 
-      &.icon-play {
-        left: -101px;
-        top: 26px;
-      }
+    .column-link_bottom {
+      display: block;
+      position: initial;
+      margin-top: 15px;
     }
   }
 }

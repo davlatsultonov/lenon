@@ -12,7 +12,7 @@
     margin-bottom: 7px;
     border-radius: 2px;
     position: relative;
-    transition: $opacity-transition;
+    transition: $btn-transition;
 
     &:hover {
       opacity: $base-opacity;

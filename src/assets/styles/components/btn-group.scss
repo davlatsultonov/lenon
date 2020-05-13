@@ -11,7 +11,7 @@
     box-shadow: $button-shadow;
     font-size: 12px;
     font-weight: 500;
-    transition: $opacity-transition;
+    transition: $btn-transition;
     padding: 0 16px;
     margin-bottom: 14px;
 
@@ -20,11 +20,11 @@
     }
 
     &:hover {
-      background-color: transparent;
+      background-color: #f1f1f1;
       cursor: pointer;
     }
 
-    &-preview {
+    &_preview {
       display: inline-block;
       vertical-align: middle;
       height: 22px;
@@ -47,7 +47,7 @@
 
     &.active {
 
-      .btn-group__item-preview {
+      .btn-group__item_preview {
         vertical-align: sub;
         height: 20px;
         padding-top: 7px;
@@ -64,11 +64,11 @@
       opacity: 0.5;
     }
 
-    &-result {
+    &_result {
       padding: 13px 18px 14px;
       text-decoration: none;
 
-      &_dark {
+      &-dark {
         background-color: #606060;
         color: #ffffff;
       }

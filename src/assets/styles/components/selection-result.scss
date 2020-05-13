@@ -1,5 +1,9 @@
 .selection-result {
 
+  &__title {
+    padding: 15px 0;
+  }
+
   &__column {
     display: inline-block;
     vertical-align: top;
