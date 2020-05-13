@@ -186,5 +186,11 @@
                 }
             }
         }
+
+        &_video {
+            .popper {
+                height: 200px;
+            }
+        }
     }
 </style>

@@ -603,14 +603,7 @@
                                     <button type="button" class="btn-group__item ">
                                         В боковых швах
 
-                                        <popover>
-                                            <template #slide-items>
-                                                <div class="product-slider__img"><img
-                                                        src="./assets/images/upper-part.png"/></div>
-                                                <div class="product-slider__img"><img
-                                                        src="./assets/images/popover-img.png"/></div>
-                                            </template>
-                                        </popover>
+                                        <popover></popover>
                                     </button>
                                 </div>
                             </div>
@@ -750,11 +743,17 @@
                                                 Смотреть
                                             </a>
 
-                                            <popover>
+                                            <popover class="popover_video">
+                                                <template #popover__content_left>
+                                                    <div class="video-block">
+
+                                                    </div>
+                                                </template>
+
                                                 <template #popover__icon>
-                                                    <span class="column-link__icon icon-play">
-                                                        <img src="./assets/images/icons/play.svg" alt="icon-play">
-                                                    </span>
+                                                <span class="column-link__icon icon-play">
+                                                    <img src="./assets/images/icons/play.svg" alt="icon-play">
+                                                </span>
                                                 </template>
                                             </popover>
                                         </div>
