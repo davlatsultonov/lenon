@@ -41,18 +41,19 @@
 <style lang="scss">
     .info-popover {
         position: relative;
-        top: -3px;
-        left: 1px;
+        top: -4px;
+        left: 2px;
 
         .popper {
             width: 135px;
             min-width: 135px;
             height: auto;
-            padding: 10px 15px;
+            padding: 10px 13px;
             font-size: 12px;
+            line-height: 15px;
             text-align: left;
-            left: 0 !important;
-            top: 0 !important;
+            left: -1px !important;
+            top: -4px !important;
         }
 
         &__item {

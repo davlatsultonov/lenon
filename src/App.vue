@@ -257,8 +257,7 @@
                                             <div class="product-slider">
 
                                                 <div class="product-slider__item product-slider__item_full-height">
-                                                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true"
-                                                                      :dots="true">
+                                                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
                                                         <slot name="slide-items">
                                                             <div class="product-slider__img"><img
                                                                     src="./assets/images/popover-img.png"/></div>
@@ -436,13 +435,7 @@
                                             Смотреть
                                         </a>
 
-                                        <popover>
-                                            <template #popover__icon>
-                                                <span class="column-link__icon icon-play">
-                                                    <img src="./assets/images/icons/play.svg" alt="icon-play">
-                                                </span>
-                                            </template>
-                                        </popover>
+                                        <video-popover></video-popover>
                                     </div>
                                 </div>
                             </div>
@@ -632,7 +625,12 @@
                                 <button type="button" class="btn-group__item">
                                     Поясок
 
-                                    <popover></popover>
+                                    <popover>
+                                        <template #slide-items>
+                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                        </template>
+                                    </popover>
                                 </button>
                             </div>
                         </div>
@@ -743,17 +741,17 @@
                                                 Смотреть
                                             </a>
 
-                                            <popover class="popover_video">
+                                            <popover>
                                                 <template #popover__content_left>
                                                     <div class="video-block">
-
+                                                        <img src="./assets/images/upper-white.png" alt="">
                                                     </div>
                                                 </template>
 
                                                 <template #popover__icon>
-                                                <span class="column-link__icon icon-play">
-                                                    <img src="./assets/images/icons/play.svg" alt="icon-play">
-                                                </span>
+                                                    <span class="column-link__icon icon-play">
+                                                        <img src="./assets/images/icons/play.svg" alt="icon-play">
+                                                    </span>
                                                 </template>
                                             </popover>
                                         </div>
@@ -839,6 +837,7 @@
     import VueSlickCarousel from 'vue-slick-carousel'
     import Popover from './components/Popover'
     import InfoPopover from './components/InfoPopover'
+    import VideoPopover from './components/VideoPopover'
 
 
     export default {
@@ -846,7 +845,8 @@
         components: {
             VueSlickCarousel,
             'popover': Popover,
-            'info-popover': InfoPopover
+            'info-popover': InfoPopover,
+            'video-popover': VideoPopover
         }
     }
 
@@ -855,6 +855,4 @@
 
 <style lang="scss">
     @import "./assets/styles/main";
-
-
 </style>

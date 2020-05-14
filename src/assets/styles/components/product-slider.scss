@@ -78,20 +78,8 @@
       height: 100%;
 
       .slick-slide {
-
-        div {
-
-          &:focus {
-            outline: none;
-          }
-        }
-
         img {
           width: 251px;
-
-          &:focus {
-            outline: none;
-          }
         }
       }
 
