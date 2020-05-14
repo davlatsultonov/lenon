@@ -79,9 +79,13 @@
       height: 100%;
 
       .slick-slide {
-        img {
-          width: 251px;
-        }
+          img {
+            width: 251px;
+
+            &:focus {
+              outline: none!important;
+            }
+          }
       }
 
       .slick-prev, .slick-next {
@@ -112,6 +116,12 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
+  }
+
+  &__separater {
+    position: absolute;
+    top: 47%;
+    left: 6%;
   }
 
 }

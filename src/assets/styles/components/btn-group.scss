@@ -63,11 +63,20 @@
 
     &.disabled {
       opacity: 0.5;
+
+      &:hover {
+        background-color: #ffffff;
+        cursor: not-allowed;
+      }
     }
 
     &_result {
       padding: 13px 18px 14px;
       text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
 
       &-dark {
         background-color: #606060;

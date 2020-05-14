@@ -16,3 +16,9 @@ body {
   border: 2px solid $active-color;
   box-shadow: none;
 }
+
+.unselected {
+  font-style: italic;
+  color: #5f5f5f;
+
+}

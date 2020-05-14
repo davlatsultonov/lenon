@@ -29,7 +29,11 @@
                                 <div class="product-slider__img"><img src="./assets/images/lower-part.png"/></div>
                             </VueSlickCarousel>
                         </div>
-                        
+
+                        <div class="product-slider__separater">
+                            <img src="./assets/images/slider-line.svg" alt="slider-line">
+                        </div>
+
                         <button type="button" class="product-slider__expand-btn">
                             <img src="./assets/images/icons/expand-icon.svg" alt="expand-icon">
                         </button>
@@ -262,7 +266,7 @@
 
                             <div class="btn-group">
                                 <div class="btn-group__items">
-                                    <button type="button" class="btn-group__item btn-group__item_xs active">
+                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                         xs
                                     </button>
 
@@ -270,15 +274,15 @@
                                         s
                                     </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_xs">
+                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                         m
                                     </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_xs">
+                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                         l
                                     </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_xs">
+                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                         xl
                                     </button>
                                 </div>
@@ -291,11 +295,11 @@
                             </div>
 
                             <div class="btn-group">
-                                <button type="button" class="btn-group__item btn-group__item_xs">
+                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                     150
                                 </button>
 
-                                <button type="button" class="btn-group__item btn-group__item_xs">
+                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                     160
                                 </button>
 
@@ -303,11 +307,11 @@
                                     170
                                 </button>
 
-                                <button type="button" class="btn-group__item btn-group__item_xs">
+                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                     180
                                 </button>
 
-                                <button type="button" class="btn-group__item btn-group__item_xs">
+                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
                                     190
                                 </button>
                             </div>
@@ -338,7 +342,7 @@
                                     Мы изготовим платье по вашим меркам. Есть видео-инструкция с рекомендациями, если
                                     возниктнут
                                     вопросы.
-                                    <div class="column-link" style="right: 0;">
+                                    <div class="column-link" style="right: -2px;">
                                         <a href="#">
                                             Смотреть
                                         </a>
@@ -359,7 +363,7 @@
 
                                 <div class="input-group__container input-group__container_md">
                                     <div class="option-block__title option-block__title_xs">
-                                        Длина платья до талии
+                                        Длина всего платья от плеча
                                     </div>
 
                                     <input type="text" class="input-group__item" placeholder="см">
@@ -377,7 +381,7 @@
 
                                 <div class="input-group__container input-group__container_xs">
                                     <div class="option-block__title option-block__title_xs">
-                                        Обхват груди
+                                        Обхват талии
                                     </div>
 
                                     <input type="text" class="input-group__item" placeholder="см">
@@ -385,7 +389,7 @@
 
                                 <div class="input-group__container input-group__container_xs">
                                     <div class="option-block__title option-block__title_xs">
-                                        Обхват груди
+                                        Обхват бедер
                                     </div>
 
                                     <input type="text" class="input-group__item" placeholder="см">
@@ -393,7 +397,7 @@
 
                                 <div class="input-group__container input-group__container_xs">
                                     <div class="option-block__title option-block__title_xs">
-                                        Обхват груди
+                                        Обхват руки
                                     </div>
 
                                     <input type="text" class="input-group__item" placeholder="см">
@@ -535,8 +539,10 @@
 
                                     <popover>
                                         <template #slide-items>
-                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                            <div class="product-slider__img"><img
+                                                    src="./assets/images/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
+                                            </div>
                                         </template>
                                     </popover>
                                 </button>
@@ -595,8 +601,8 @@
                                             </li>
                                             <li class="result-list__item">Горчичный</li>
                                             <li class="result-list__item">Без принта</li>
-                                            <li class="result-list__item">–</li>
-                                            <li class="result-list__item">–</li>
+                                            <li class="result-list__item unselected">–</li>
+                                            <li class="result-list__item">Выберите размер</li>
                                             <li class="result-list__item">–</li>
                                         </ul>
                                     </div>
@@ -668,8 +674,55 @@
                                 Дополнительно вы выбрали
                             </div>
 
-                            <div class="option-block__title option-block__title_sm option-block__title_italic">
+                           <!-- <div class="option-block__title option-block__title_sm unselected padding-top-17 padding-bottom-17">
                                 Выберите аксессуары и фурнитуру дополнительно к платью выше.
+                            </div>-->
+
+                            <div class="selection-result">
+
+                                <div class="selection-result_wrapper">
+
+                                    <div class="selection-result__column">
+                                        <ul class="result-list">
+                                            <li class="result-list__item">Пуговки</li>
+                                            <li class="result-list__item">Рукава</li>
+                                            <li class="result-list__item">Карманы</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="selection-result__column">
+                                        <ul class="result-list">
+                                            <li class="result-list__item">300 руб.</li>
+                                            <li class="result-list__item">300 руб.</li>
+                                            <li class="result-list__item">300 руб.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="selection-result__column">
+                                        <ul class="result-list">
+                                            <li class="result-list__item">На груди, 3/4</li>
+                                            <li class="result-list__item">Да, 3/4</li>
+                                            <li class="result-list__item">Да</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="selection-result__column">
+                                        <ul class="result-list">
+                                            <li class="result-list__item result-list__item_remove">
+                                                Убрать
+                                            </li>
+                                            <li class="result-list__item result-list__item_remove">
+                                                Убрать
+                                            </li>
+                                            <li class="result-list__item result-list__item_remove">
+                                                Убрать
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
                             </div>
 
                             <div class="option-block__title option-block__title_bold">
