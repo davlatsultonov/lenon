@@ -14,7 +14,7 @@
 
             <div class="popover__header">
                 <div class="option-block__title">
-                    Платок
+                    Видео-инструкция
                 </div>
 
                 <div class="popover__close">
@@ -27,12 +27,28 @@
 
             <div class="popover__content">
 
-                <div class="video-block__item">
+                <div class="video-popover__item">
                     <slot>
-                        <img src="../assets/images/upper-white.png" alt="" height="200">
+                        <iframe width="319" height="200"
+                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
                     </slot>
 
-                    <div class="video-block__overlay"></div>
+                    <div class="video-items">
+                        <a href="#" class="" class="video-items__btn">
+                            <img src="../assets/images/icons/video-play-icon.svg" alt="video-play-icon">
+                            <span>
+                                Смотреть
+                            </span>
+                        </a>
+
+
+                        <div class="video-items__quality">
+                            HD720, 25Mb
+                        </div>
+                    </div>
+
+                    <div class="video-popover__overlay"></div>
                 </div>
             </div>
 

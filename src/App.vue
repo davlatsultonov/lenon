@@ -646,19 +646,7 @@
                                                 Смотреть
                                             </a>
 
-                                            <popover>
-                                                <template #popover__content_left>
-                                                    <div class="video-block">
-                                                        <img src="./assets/images/upper-white.png" alt="">
-                                                    </div>
-                                                </template>
-
-                                                <template #popover__icon>
-                                                    <span class="column-link__icon icon-play">
-                                                        <img src="./assets/images/icons/play.svg" alt="icon-play">
-                                                    </span>
-                                                </template>
-                                            </popover>
+                                            <video-popover></video-popover>
                                         </div>
                                     </div>
                                 </div>
