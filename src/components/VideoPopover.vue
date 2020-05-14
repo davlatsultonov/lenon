@@ -1,14 +1,6 @@
 <template>
     <popper trigger="clickToToggle"
-            :options="{
-                  placement: 'top',
-                  modifiers: {
-                        name: 'offset',
-                      options: {
-                        offset: ['10px', '80px'],
-                      }
-                  }
-                }" class="popover video-popover">
+            :options="{ placement: 'top' }" class="popover video-popover">
 
         <div class="popper">
 
@@ -29,8 +21,8 @@
 
                 <div class="video-popover__item">
                     <slot>
-                        <iframe width="319" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        <iframe
+                                src="">
                         </iframe>
                     </slot>
 
@@ -74,5 +66,5 @@
 </script>
 
 <style lang="scss">
-    @import "../assets/styles/components/video-popover";
+
 </style>

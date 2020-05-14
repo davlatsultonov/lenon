@@ -2,16 +2,18 @@
   .popper {
     left: -42px !important;
     top: -9px !important;
+    padding: 50px 34px 40px;
   }
 
   &__item {
-    height: 200px;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
 
     iframe {
       border: none;
+      width: 319px;
+      height: 200px;
     }
   }
 
@@ -27,7 +29,7 @@
   .video-items {
     font-size: 12px;
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 78;

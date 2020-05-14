@@ -1,14 +1,6 @@
 <template>
     <popper trigger="clickToToggle"
-            :options="{
-                  placement: 'top',
-                  modifiers: {
-                        name: 'offset',
-                      options: {
-                        offset: ['10px', '80px'],
-                      }
-                  }
-                }" class="popover size-popover">
+            :options="{ placement: 'top' }" class="popover size-popover">
 
         <div class="popper">
 
@@ -146,5 +138,5 @@
 </script>
 
 <style lang="scss">
-    @import "../assets/styles/components/size-popover";
+
 </style>

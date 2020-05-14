@@ -720,11 +720,10 @@
 
         </div>
 
-
-
     </div>
 
 </template>
+
 
 <script>
     import VueSlickCarousel from 'vue-slick-carousel'
@@ -732,6 +731,7 @@
     import VideoPopover from './components/VideoPopover'
     import SizePopover from './components/SizePopover'
     import Popover from './components/Popover'
+
 
     export default {
         name: 'App',
@@ -746,7 +746,6 @@
 
 
 </script>
-
 <style lang="scss">
     @import "./assets/styles/main";
 </style>

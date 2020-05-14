@@ -4,7 +4,6 @@
   left: 2px;
 
   .popper {
-    width: 135px;
     min-width: 135px;
     height: auto;
     padding: 10px 13px;
@@ -13,6 +12,7 @@
     text-align: left;
     left: -1px !important;
     top: -4px !important;
+
   }
 
   &__item {
