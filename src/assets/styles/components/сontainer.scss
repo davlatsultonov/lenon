@@ -6,12 +6,12 @@
   }
 
   &__column {
-    width: 48%;
+    width: 47%;
     display: inline-block;
     vertical-align: top;
 
     &:not(:last-child) {
-      margin-right: 27px;
+      margin-right: 30px;
     }
 
     &_fluid {

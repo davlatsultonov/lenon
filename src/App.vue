@@ -44,7 +44,7 @@
 
                     <div class="option-block">
 
-                        <div class="option-block__title padding-top-5">
+                        <div class="option-block__title padding-top-5 margin-top-0">
                             Выберите фасон
                         </div>
 
@@ -81,7 +81,7 @@
                             </div>
 
                             <div class="option-block__title">
-                                Выберите цвет
+                                Выберите цвет верха
                             </div>
 
 
@@ -106,7 +106,7 @@
 
 
                             <div class="option-block__title">
-                                Выберите цвет
+                                Выберите цвет юбки
                             </div>
 
                             <ul class="color-picker color-picker__container">
@@ -129,7 +129,7 @@
                                 Выберите принт верха
                             </div>
 
-                            <div class="btn-group padding-top-13">
+                            <div class="btn-group padding-top-7">
                                 <div class="btn-group__items">
                                     <button type="button" class="btn-group__item btn-group__item_sm active">
                                         Без принта
@@ -148,49 +148,63 @@
                             <div class="product-style product-style_patterns">
                                 <div class="product-style__item">
                                     <button class="product-style__btn active">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/pattern.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/leaves.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/leaves-2.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/ship.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/birds.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/horse.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
 
                                 <div class="product-style__item">
                                     <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/icons/pattern.svg"
+                                        <img class="product-style__icon" src="./assets/images/patterns/whales.svg"
+                                             alt="pattern-icon">
+                                    </button>
+                                </div>
+
+                                <div class="product-style__item">
+                                    <button class="product-style__btn">
+                                        <img class="product-style__icon" src="./assets/images/patterns/fox.svg"
+                                             alt="pattern-icon">
+                                    </button>
+                                </div>
+
+                                <div class="product-style__item">
+                                    <button class="product-style__btn">
+                                        <img class="product-style__icon" src="./assets/images/patterns/deer.svg"
                                              alt="pattern-icon">
                                     </button>
                                 </div>
