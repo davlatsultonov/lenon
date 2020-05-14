@@ -252,102 +252,7 @@
                                         Примеры размеров
                                     </a>
 
-                                    <popover class="popover_size">
-                                        <template #popover__content_left>
-                                            <div class="product-slider">
-
-                                                <div class="product-slider__item product-slider__item_full-height">
-                                                    <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
-                                                        <slot name="slide-items">
-                                                            <div class="product-slider__img"><img
-                                                                    src="./assets/images/popover-img.png"/></div>
-                                                            <div class="product-slider__img"><img
-                                                                    src="./assets/images/upper-part.png"/></div>
-                                                        </slot>
-                                                    </VueSlickCarousel>
-                                                </div>
-
-                                            </div>
-                                        </template>
-
-                                        <template #popover__content_right>
-                                            <div class="product-style ">
-
-                                                <div class="product-style__item">
-                                                    <button class="product-style__btn active">
-                                                        <img class="product-style__icon"
-                                                             src="./assets/images/icons/popover-size-img.png"
-                                                             alt="straight-icon">
-                                                        <div class="product-style__checked"><span></span></div>
-                                                    </button>
-
-                                                    <div class="product-style__text">M</div>
-                                                </div>
-
-                                                <div class="product-style__item">
-                                                    <button class="product-style__btn">
-                                                        <img class="product-style__icon"
-                                                             src="./assets/images/icons/popover-size-img.png"
-                                                             alt="straight-icon">
-
-                                                        <div class="product-style__checked"><span></span></div>
-                                                    </button>
-                                                    <div class="product-style__text">S</div>
-                                                </div>
-
-                                                <div class="product-style__item">
-                                                    <button class="product-style__btn">
-                                                        <img class="product-style__icon"
-                                                             src="./assets/images/icons/popover-size-img.png"
-                                                             alt="straight-icon">
-
-                                                        <div class="product-style__checked"><span></span></div>
-                                                    </button>
-                                                    <div class="product-style__text">S</div>
-                                                </div>
-
-                                                <div class="product-style__item">
-                                                    <button class="product-style__btn">
-                                                        <img class="product-style__icon"
-                                                             src="./assets/images/icons/popover-size-img.png"
-                                                             alt="straight-icon">
-                                                        <div class="product-style__checked"><span></span></div>
-                                                    </button>
-
-                                                    <div class="product-style__text">M</div>
-                                                </div>
-
-                                                <div class="product-style__item">
-                                                    <button class="product-style__btn">
-                                                        <img class="product-style__icon"
-                                                             src="./assets/images/icons/popover-size-img.png"
-                                                             alt="straight-icon">
-
-                                                        <div class="product-style__checked"><span></span></div>
-                                                    </button>
-                                                    <div class="product-style__text">S</div>
-                                                </div>
-
-                                                <div class="product-style__item">
-                                                    <button class="product-style__btn">
-                                                        <img class="product-style__icon"
-                                                             src="./assets/images/icons/popover-size-img.png"
-                                                             alt="straight-icon">
-
-                                                        <div class="product-style__checked"><span></span></div>
-                                                    </button>
-                                                    <div class="product-style__text">S</div>
-                                                </div>
-
-                                            </div>
-                                        </template>
-
-                                        <template #popover__icon>
-                                            <span class="column-link__icon icon-eye">
-                                                <img src="./assets/images/icons/eye.svg" alt="icon-eye">
-                                            </span>
-                                        </template>
-                                    </popover>
+                                    <size-popover></size-popover>
                                 </div>
 
                             </div>
@@ -835,16 +740,17 @@
 
 <script>
     import VueSlickCarousel from 'vue-slick-carousel'
-    import Popover from './components/Popover'
     import InfoPopover from './components/InfoPopover'
     import VideoPopover from './components/VideoPopover'
-
+    import SizePopover from './components/SizePopover'
+    import Popover from './components/Popover'
 
     export default {
         name: 'App',
         components: {
             VueSlickCarousel,
             'popover': Popover,
+            'size-popover': SizePopover,
             'info-popover': InfoPopover,
             'video-popover': VideoPopover
         }
