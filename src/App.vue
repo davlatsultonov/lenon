@@ -29,7 +29,10 @@
                                 <div class="product-slider__img"><img src="./assets/images/lower-part.png"/></div>
                             </VueSlickCarousel>
                         </div>
-
+                        
+                        <button type="button" class="product-slider__expand-btn">
+                            <img src="./assets/images/icons/expand-icon.svg" alt="expand-icon">
+                        </button>
                     </div>
                 </div>
 
