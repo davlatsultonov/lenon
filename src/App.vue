@@ -85,20 +85,23 @@
                             </div>
 
 
+                            <!--<div class="color-picker color-picker__container">
+                                <span class="color-picker__item checked" style="background-color: #c4867b"></span>
+                            </div>-->
                             <ul class="color-picker color-picker__container">
                                 <li class="color-picker__item checked" style="background-color: #c4867b"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
+                                <li class="color-picker__item" style="background-color: #FA6400"></li>
+                                <li class="color-picker__item" style="background-color: #8A2220"></li>
+                                <li class="color-picker__item" style="background-color: #A2522F"></li>
+                                <li class="color-picker__item" style="background-color: #C4867B"></li>
+                                <li class="color-picker__item" style="background-color: #C38120"></li>
+                                <li class="color-picker__item" style="background-color: #365130"></li>
+                                <li class="color-picker__item" style="background-color: #004C4B"></li>
+                                <li class="color-picker__item" style="background-color: #004C4B"></li>
+                                <li class="color-picker__item" style="background-color: #154F90"></li>
+                                <li class="color-picker__item" style="background-color: #5989B9"></li>
+                                <li class="color-picker__item" style="background-color: #F3F4F5"></li>
+                                <li class="color-picker__item" style="background-color: #C8C7C0"></li>
                             </ul>
 
 
@@ -108,18 +111,18 @@
 
                             <ul class="color-picker color-picker__container">
                                 <li class="color-picker__item checked" style="background-color: #c4867b"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
-                                <li class="color-picker__item" style="background-color: #c4b3c2"></li>
+                                <li class="color-picker__item" style="background-color: #FA6400"></li>
+                                <li class="color-picker__item" style="background-color: #8A2220"></li>
+                                <li class="color-picker__item" style="background-color: #A2522F"></li>
+                                <li class="color-picker__item" style="background-color: #C4867B"></li>
+                                <li class="color-picker__item" style="background-color: #C38120"></li>
+                                <li class="color-picker__item" style="background-color: #365130"></li>
+                                <li class="color-picker__item" style="background-color: #004C4B"></li>
+                                <li class="color-picker__item" style="background-color: #004C4B"></li>
+                                <li class="color-picker__item" style="background-color: #154F90"></li>
+                                <li class="color-picker__item" style="background-color: #5989B9"></li>
+                                <li class="color-picker__item" style="background-color: #F3F4F5"></li>
+                                <li class="color-picker__item" style="background-color: #C8C7C0"></li>
                             </ul>
 
                             <div class="option-block__title">
@@ -254,13 +257,7 @@
 
                                 <info-popover></info-popover>
 
-                                <div class="column-link">
-                                    <a href="#">
-                                        Примеры размеров
-                                    </a>
-
-                                    <size-popover></size-popover>
-                                </div>
+                                <size-popover></size-popover>
 
                             </div>
 
@@ -342,13 +339,8 @@
                                     Мы изготовим платье по вашим меркам. Есть видео-инструкция с рекомендациями, если
                                     возниктнут
                                     вопросы.
-                                    <div class="column-link" style="right: -2px;">
-                                        <a href="#">
-                                            Смотреть
-                                        </a>
 
-                                        <video-popover></video-popover>
-                                    </div>
+                                    <video-popover></video-popover>
                                 </div>
                             </div>
 
@@ -539,14 +531,74 @@
 
                                     <popover>
                                         <template #slide-items>
-                                            <div class="product-slider__img"><img
-                                                    src="./assets/images/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
-                                            </div>
+                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
                                         </template>
                                     </popover>
                                 </button>
+
                             </div>
+
+                            <div class="btn-group__items">
+                                <button type="button" class="btn-group__item">
+                                    Молния для кормления
+
+                                    <popover></popover>
+                                </button>
+
+                                <button type="button" class="btn-group__item">
+                                    Шопер
+
+                                    <popover>
+                                        <template #slide-items>
+                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                        </template>
+                                    </popover>
+                                </button>
+
+                            </div>
+
+                            <div class="btn-group__items">
+                                <button type="button" class="btn-group__item">
+                                    Кармашек с вышивкой
+
+                                    <popover></popover>
+                                </button>
+
+                                <button type="button" class="btn-group__item">
+                                    Кардиган
+
+                                    <popover>
+                                        <template #slide-items>
+                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                        </template>
+                                    </popover>
+                                </button>
+
+                            </div>
+
+                            <div class="btn-group__items">
+                                <button type="button" class="btn-group__item">
+                                    Резинки для волос
+
+                                    <popover></popover>
+                                </button>
+
+                                <button type="button" class="btn-group__item">
+                                    Нижняя юбка
+
+                                    <popover>
+                                        <template #slide-items>
+                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
+                                        </template>
+                                    </popover>
+                                </button>
+
+                            </div>
+
                         </div>
 
                         <div class="product-note margin-top-6">
@@ -650,11 +702,7 @@
                                         Проверьте внимательно указанные размеры перед окончательным оформлением заказа.
                                         Если сомневаетесь есть видео-инструкция с рекомендациями
 
-                                        <div class="column-link column-link_bottom">
-                                            <a href="#">
-                                                Смотреть
-                                            </a>
-
+                                        <div class="column-link_bottom">
                                             <video-popover></video-popover>
                                         </div>
                                     </div>
@@ -797,6 +845,17 @@
             'size-popover': SizePopover,
             'info-popover': InfoPopover,
             'video-popover': VideoPopover
+        },
+        data() {
+            return {
+                show: false,
+                checked: true
+            }
+        },
+        methods: {
+            check() {
+                this.checked = !this.checked;
+            }
         }
     }
 

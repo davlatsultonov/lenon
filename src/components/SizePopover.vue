@@ -1,15 +1,16 @@
 <template>
     <popper trigger="clickToToggle"
+            @show="show"
             :options="{ placement: 'top' }" class="popover size-popover">
 
         <div class="popper">
 
             <div class="popover__header">
                 <div class="option-block__title">
-                    Платок
+                    Видео-инструкция
                 </div>
 
-                <div class="popover__close">
+                <div class="popover__close"  @click="close">
                     Закрыть
                     <div class="popover__close-icon">
                         <img src="../assets/images/icons/close.svg" alt="close-icon">
@@ -116,9 +117,17 @@
 
         </div>
 
-        <span class="column-link__icon icon-eye" slot="reference">
-            <img src="../assets/images/icons/eye.svg" alt="icon-eye">
-        </span>
+        <div class="column-link" slot="reference">
+            <a href="#" @click.prevent>
+                Примеры размеров
+            </a>
+
+            <span class="column-link__icon icon-eye" >
+
+                <img src="../assets/images/icons/eye.svg" alt="icon-eye">
+            </span>
+        </div>
+
     </popper>
 </template>
 
@@ -131,6 +140,21 @@
         components: {
             VueSlickCarousel,
             'popper': Popper
+        },
+        data() {
+            return {
+                openedPopper: null
+            }
+        },
+        methods: {
+            close() {
+                if(this.openedPopper) {
+                    this.openedPopper.doClose();
+                }
+            },
+            show(event) {
+                this.openedPopper = event;
+            }
         }
     }
 

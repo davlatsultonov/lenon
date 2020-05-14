@@ -1,5 +1,5 @@
 <template>
-    <popper trigger="clickToToggle"
+    <popper trigger="hover"
             :options="{ placement: 'top' }" class="popover info-popover">
 
         <div class="popper">

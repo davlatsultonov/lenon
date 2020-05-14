@@ -1,5 +1,6 @@
 <template>
     <popper trigger="clickToToggle"
+            @show="show"
             :options="{ placement: 'top' }" class="popover video-popover">
 
         <div class="popper">
@@ -9,7 +10,7 @@
                     Видео-инструкция
                 </div>
 
-                <div class="popover__close">
+                <div class="popover__close"  @click="close">
                     Закрыть
                     <div class="popover__close-icon">
                         <img src="../assets/images/icons/close.svg" alt="close-icon">
@@ -21,9 +22,7 @@
 
                 <div class="video-popover__item">
                     <slot>
-                        <iframe
-                                src="">
-                        </iframe>
+                        <img src="../assets/images/video-bg.png" alt="" height="200">
                     </slot>
 
                     <div class="video-items">
@@ -46,9 +45,16 @@
 
         </div>
 
-        <span class="column-link__icon icon-play" slot="reference">
-            <img src="../assets/images/icons/play.svg" alt="icon-play">
-        </span>
+        <div class="column-link" style="right: -2px;" slot="reference">
+            <a href="#" @click.prevent>
+                Смотреть
+            </a>
+
+            <span class="column-link__icon icon-play" >
+                <img src="../assets/images/icons/play.svg" alt="icon-play">
+            </span>
+
+        </div>
     </popper>
 </template>
 
@@ -59,6 +65,21 @@
         name: "Popover",
         components: {
             'popper': Popper
+        },
+        data() {
+            return {
+                openedPopper: null
+            }
+        },
+        methods: {
+            close() {
+                if(this.openedPopper) {
+                    this.openedPopper.doClose();
+                }
+            },
+            show(event) {
+                this.openedPopper = event;
+            }
         }
     }
 

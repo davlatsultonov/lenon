@@ -1,5 +1,6 @@
 <template>
     <popper trigger="clickToToggle"
+            @show="show"
             :options="{
                   placement: 'top',
                   modifiers: {
@@ -14,10 +15,10 @@
 
             <div class="popover__header">
                 <div class="option-block__title">
-                    Платок
+                    Видео-инструкция
                 </div>
 
-                <div class="popover__close">
+                <div class="popover__close"  @click="close">
                     Закрыть
                     <div class="popover__close-icon">
                         <img src="../assets/images/icons/close.svg" alt="close-icon">
@@ -42,14 +43,14 @@
 
         </div>
 
-        <span class="btn-group__item_preview" slot="reference">
+        <span class="btn-group__item_preview" slot="reference" >
             <img src="../assets/images/icons/eye.svg" alt="icon-eye">
         </span>
     </popper>
 </template>
 
 <script>
-    import VueSlickCarousel from 'vue-slick-carousel'
+    import VueSlickCarousel from 'vue-slick-carousel';
     import Popper from 'vue-popperjs';
 
     export default {
@@ -57,7 +58,23 @@
         components: {
             VueSlickCarousel,
             'popper': Popper
+        },
+        data() {
+            return {
+                openedPopper: null
+            }
+        },
+        methods: {
+            close() {
+                if(this.openedPopper) {
+                    this.openedPopper.doClose();
+                }
+            },
+            show(event) {
+                this.openedPopper = event;
+            }
         }
+
     }
 
 
