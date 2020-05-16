@@ -1,9 +1,15 @@
 .product-style {
+  max-height: 372px;
 
   &_patterns {
 
-    .product-style__item {
-      margin-bottom: 15px;
+
+    .product-style__items {
+       margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .product-style__icon {

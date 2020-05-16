@@ -80,49 +80,101 @@
                                 </div>
                             </div>
 
-                            <div class="option-block__title">
+                            <div class="option-block__title option-block__title_m-top">
                                 Выберите цвет верха
                             </div>
 
 
                             <ul class="color-picker color-picker__container">
-                                <li class="color-picker__item" style="background-color: #FA6400"></li>
-                                <li class="color-picker__item" style="background-color: #8A2220"></li>
-                                <li class="color-picker__item" style="background-color: #A2522F"></li>
-                                <li class="color-picker__item" style="background-color: #C4867B"></li>
-                                <li class="color-picker__item" style="background-color: #C38120"></li>
-                                <li class="color-picker__item" style="background-color: #365130"></li>
-                                <li class="color-picker__item" style="background-color: #004C4B"></li>
-                                <li class="color-picker__item" style="background-color: #004C4B"></li>
-                                <li class="color-picker__item" style="background-color: #154F90"></li>
-                                <li class="color-picker__item" style="background-color: #5989B9"></li>
-                                <li class="color-picker__item" style="background-color: #F3F4F5"></li>
-                                <li class="color-picker__item" style="background-color: #C8C7C0"></li>
-                                <li class="color-picker__item" style="background-color: #353228"></li>
+                                <li class="color-picker__item checked">
+                                    <span style="background-color: #543c31;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #8A2220;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #A2522F;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #C4867B;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #C38120;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #365130;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #004C4B;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #004C4B;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #154F90;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #5989B9;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #F3F4F5;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #C8C7C0;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #353228;"></span>
+                                </li>
                             </ul>
 
 
-                            <div class="option-block__title">
+                            <div class="option-block__title option-block__title_m-top">
                                 Выберите цвет юбки
                             </div>
 
                             <ul class="color-picker color-picker__container">
-                                <li class="color-picker__item checked" style="background-color: #c4867b"></li>
-                                <li class="color-picker__item" style="background-color: #FA6400"></li>
-                                <li class="color-picker__item" style="background-color: #8A2220"></li>
-                                <li class="color-picker__item" style="background-color: #A2522F"></li>
-                                <li class="color-picker__item" style="background-color: #C4867B"></li>
-                                <li class="color-picker__item" style="background-color: #C38120"></li>
-                                <li class="color-picker__item" style="background-color: #365130"></li>
-                                <li class="color-picker__item" style="background-color: #004C4B"></li>
-                                <li class="color-picker__item" style="background-color: #004C4B"></li>
-                                <li class="color-picker__item" style="background-color: #154F90"></li>
-                                <li class="color-picker__item" style="background-color: #5989B9"></li>
-                                <li class="color-picker__item" style="background-color: #F3F4F5"></li>
-                                <li class="color-picker__item" style="background-color: #C8C7C0"></li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #543c31;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #8A2220;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #A2522F;"></span>
+                                </li>
+                                <li class="color-picker__item checked">
+                                    <span style="background-color: #C4867B;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #C38120;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #365130;"></span>
+                                </li>
+                                <li class="color-picker__item ">
+                                    <span style="background-color: #004C4B;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #004C4B;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #154F90;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #5989B9;"></span>
+                                </li>
+                                <li class="color-picker__item ">
+                                    <span style="background-color: #F3F4F5;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #C8C7C0;"></span>
+                                </li>
+                                <li class="color-picker__item">
+                                    <span style="background-color: #353228;"></span>
+                                </li>
                             </ul>
 
-                            <div class="option-block__title">
+                            <div class="option-block__title option-block__title_m-top">
                                 Выберите принт верха
                             </div>
 
@@ -147,74 +199,81 @@
                             </div>
 
                             <div class="product-style product-style_patterns">
-                                <div class="product-style__item">
-                                    <button class="product-style__btn active">
-                                        <img class="product-style__icon" src="./assets/images/patterns/pattern.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
+                                <div class="product-style__items">
 
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/leaves.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/leaves-2.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/ship.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/birds.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/horse.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/whales.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/fox.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <button class="product-style__btn">
-                                        <img class="product-style__icon" src="./assets/images/patterns/deer.svg"
-                                             alt="pattern-icon">
-                                    </button>
-                                </div>
-
-
-                                <div class="product-style__item">
-                                    <div class="product-style__btn product-style__link">
-                                        <a href="#">еще <span>+10</span></a>
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn active">
+                                            <img class="product-style__icon" src="./assets/images/patterns/pattern.svg"
+                                                 alt="pattern-icon">
+                                        </button>
                                     </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/leaves.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/leaves-2.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/ship.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/birds.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="product-style__items">
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/horse.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/whales.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/fox.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <button class="product-style__btn">
+                                            <img class="product-style__icon" src="./assets/images/patterns/deer.svg"
+                                                 alt="pattern-icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item">
+                                        <div class="product-style__btn product-style__link">
+                                            <a href="#">еще <span>+10</span></a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -257,16 +316,11 @@
 
                             <div class="btn-group">
 
-                                    <div class="btn-group__item btn-group__item_sm">
-                                        <button type="button" class="active">
-                                            Взрослое
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_sm">
-                                        <button type="button">
-                                            Детское
-                                        </button>
-                                    </div>
+                                <div class="btn-group__item btn-group__item_sm" v-for="(type, index) in sizeType.types" :key="index">
+                                    <button type="button" :class="{ active:  type === sizeType.currentType }" @click="sizeType.currentType = type">
+                                        {{ type }}
+                                    </button>
+                                </div>
 
                             </div>
 
@@ -281,29 +335,9 @@
 
                             <div class="btn-group">
 
-                                    <div class="btn-group__item btn-group__item_xs">
-                                        <button type="button">
-                                            xs
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_xs">
-                                        <button type="button">
-                                            s
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_xs">
-                                        <button type="button">
-                                            m
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_xs">
-                                        <button type="button">
-                                            l
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_xs">
-                                        <button type="button">
-                                            xl
+                                    <div class="btn-group__item btn-group__item_xs" v-for="(size, index) in euroSize.size" :key="index">
+                                        <button type="button" :class="{ active:  size === euroSize.currentSize }" @click="euroSize.currentSize = size">
+                                            {{ size }}
                                         </button>
                                     </div>
 
@@ -316,29 +350,9 @@
                             </div>
 
                             <div class="btn-group">
-                                <div class="btn-group__item btn-group__item_xs">
-                                    <button type="button">
-                                        150
-                                    </button>
-                                </div>
-                                <div class="btn-group__item btn-group__item_xs">
-                                    <button type="button">
-                                        160
-                                    </button>
-                                </div>
-                                <div class="btn-group__item btn-group__item_xs">
-                                    <button type="button">
-                                        170
-                                    </button>
-                                </div>
-                                <div class="btn-group__item btn-group__item_xs">
-                                    <button type="button">
-                                        180
-                                    </button>
-                                </div>
-                                <div class="btn-group__item btn-group__item_xs">
-                                    <button type="button">
-                                        190
+                                <div class="btn-group__item btn-group__item_xs" v-for="(h, index) in bodyHeight.height" :key="index">
+                                    <button type="button" :class="{ active: h === bodyHeight.currentHeigt }" @click="bodyHeight.currentHeigt = h">
+                                        {{ h }}
                                     </button>
                                 </div>
                             </div>
@@ -380,7 +394,7 @@
                                         Длина платья до талии
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см">
+                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures.waist">
                                 </div>
 
                                 <div class="input-group__container input-group__container_md">
@@ -388,7 +402,7 @@
                                         Длина всего платья от плеча
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см">
+                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures.shoulder">
                                 </div>
                             </div>
 
@@ -398,7 +412,7 @@
                                         Обхват груди
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см">
+                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['chest-girth']">
                                 </div>
 
                                 <div class="input-group__container input-group__container_xs">
@@ -406,7 +420,7 @@
                                         Обхват талии
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см">
+                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['waist-girth']">
                                 </div>
 
                                 <div class="input-group__container input-group__container_xs">
@@ -414,7 +428,7 @@
                                         Обхват бедер
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см">
+                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['hip-girth']">
                                 </div>
 
                                 <div class="input-group__container input-group__container_xs">
@@ -422,13 +436,13 @@
                                         Обхват руки
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см">
+                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['hand-girth']">
                                 </div>
                             </div>
 
                             <div class="product-note">
                                 <div class="product-note__description">
-                                    <a href="#">Сбросить показатели</a> если хотите выбрать стандартный размер
+                                    <a href="#" @click.prevent="resetMeasures">Сбросить показатели</a> если хотите выбрать стандартный размер
                                 </div>
                             </div>
 
@@ -459,7 +473,7 @@
 
                                 <div class="btn-group__item">
                                     <button type="button">
-                                        На спине
+                                        На груди
                                         <popover></popover>
                                     </button>
                                 </div>
@@ -481,13 +495,13 @@
 
                                     <div class="btn-group__item">
                                         <button type="button">
-                                            длину
+                                            До талии
                                             <popover></popover>
                                         </button>
                                     </div>
 
                                     <div class="btn-group__item">
-                                        <button type="button">
+                                        <button type="button" class="disabled">
                                             Всю длину
                                             <popover></popover>
                                         </button>
@@ -912,13 +926,31 @@
         },
         data() {
             return {
-                show: false,
-                checked: true
+                measures: {
+                    waist: '',
+                    shoulder: '',
+                    "chest-girth": '',
+                    "waist-girth": '',
+                    "hip-girth": '',
+                    "hand-girth": '',
+                },
+                sizeType: {
+                    types: ['Взрослое', 'Детское'],
+                    currentType: ''
+                },
+                euroSize: {
+                    size: ['xs', 's', 'm', 'l', 'xl'],
+                    currentSize: ''
+                },
+                bodyHeight: {
+                    height: [150, 160, 170, 180, 190],
+                    currentHeigt: 0,
+                },
             }
         },
         methods: {
-            check() {
-                this.checked = !this.checked;
+            resetMeasures() {
+                Object.keys(this.measures).forEach(key => this.measures[key] = "");
             }
         }
     }
