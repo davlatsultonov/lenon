@@ -85,11 +85,7 @@
                             </div>
 
 
-                            <!--<div class="color-picker color-picker__container">
-                                <span class="color-picker__item checked" style="background-color: #c4867b"></span>
-                            </div>-->
                             <ul class="color-picker color-picker__container">
-                                <li class="color-picker__item checked" style="background-color: #c4867b"></li>
                                 <li class="color-picker__item" style="background-color: #FA6400"></li>
                                 <li class="color-picker__item" style="background-color: #8A2220"></li>
                                 <li class="color-picker__item" style="background-color: #A2522F"></li>
@@ -102,6 +98,7 @@
                                 <li class="color-picker__item" style="background-color: #5989B9"></li>
                                 <li class="color-picker__item" style="background-color: #F3F4F5"></li>
                                 <li class="color-picker__item" style="background-color: #C8C7C0"></li>
+                                <li class="color-picker__item" style="background-color: #353228"></li>
                             </ul>
 
 
@@ -130,19 +127,23 @@
                             </div>
 
                             <div class="btn-group padding-top-7">
-                                <div class="btn-group__items">
-                                    <button type="button" class="btn-group__item btn-group__item_sm active">
-                                        Без принта
-                                    </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_sm">
-                                        До пояса
-                                    </button>
+                                    <div class="btn-group__item btn-group__item_sm">
+                                        <button type="button" class="active">
+                                            Без принта
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_sm">
+                                        <button type="button">
+                                            До пояса
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_sm">
+                                        <button type="button">
+                                            Полностью
+                                        </button>
+                                    </div>
 
-                                    <button type="button" class="btn-group__item btn-group__item_sm">
-                                        Полностью
-                                    </button>
-                                </div>
                             </div>
 
                             <div class="product-style product-style_patterns">
@@ -255,15 +256,18 @@
                         <div class="option-block__content">
 
                             <div class="btn-group">
-                                <div class="btn-group__items">
-                                    <button type="button" class="btn-group__item btn-group__item_sm active">
-                                        Взрослое
-                                    </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_sm">
-                                        Детское
-                                    </button>
-                                </div>
+                                    <div class="btn-group__item btn-group__item_sm">
+                                        <button type="button" class="active">
+                                            Взрослое
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_sm">
+                                        <button type="button">
+                                            Детское
+                                        </button>
+                                    </div>
+
                             </div>
 
                             <div class="option-block__title option-block__title_xs">
@@ -276,27 +280,33 @@
                             </div>
 
                             <div class="btn-group">
-                                <div class="btn-group__items">
-                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                        xs
-                                    </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                        s
-                                    </button>
+                                    <div class="btn-group__item btn-group__item_xs">
+                                        <button type="button">
+                                            xs
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_xs">
+                                        <button type="button">
+                                            s
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_xs">
+                                        <button type="button">
+                                            m
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_xs">
+                                        <button type="button">
+                                            l
+                                        </button>
+                                    </div>
+                                    <div class="btn-group__item btn-group__item_xs">
+                                        <button type="button">
+                                            xl
+                                        </button>
+                                    </div>
 
-                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                        m
-                                    </button>
-
-                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                        l
-                                    </button>
-
-                                    <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                        xl
-                                    </button>
-                                </div>
                             </div>
 
                             <div class="option-block__title option-block__title_xs">
@@ -306,25 +316,31 @@
                             </div>
 
                             <div class="btn-group">
-                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                    150
-                                </button>
-
-                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                    160
-                                </button>
-
-                                <button type="button" class="btn-group__item btn-group__item_xs active">
-                                    170
-                                </button>
-
-                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                    180
-                                </button>
-
-                                <button type="button" class="btn-group__item btn-group__item_xs disabled">
-                                    190
-                                </button>
+                                <div class="btn-group__item btn-group__item_xs">
+                                    <button type="button">
+                                        150
+                                    </button>
+                                </div>
+                                <div class="btn-group__item btn-group__item_xs">
+                                    <button type="button">
+                                        160
+                                    </button>
+                                </div>
+                                <div class="btn-group__item btn-group__item_xs">
+                                    <button type="button">
+                                        170
+                                    </button>
+                                </div>
+                                <div class="btn-group__item btn-group__item_xs">
+                                    <button type="button">
+                                        180
+                                    </button>
+                                </div>
+                                <div class="btn-group__item btn-group__item_xs">
+                                    <button type="button">
+                                        190
+                                    </button>
+                                </div>
                             </div>
 
                             <div class="product-note">
@@ -440,80 +456,102 @@
                                     Пуговки
                                 </div>
 
-                                <div class="btn-group__items">
-                                    <button type="button" class="btn-group__item btn-group__item_sm active">
-                                        На груди
-                                    </button>
 
-                                    <button type="button" class="btn-group__item btn-group__item_sm">
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         На спине
+                                        <popover></popover>
                                     </button>
+                                </div>
 
-                                    <div class="btn-group">
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        На спине
+                                        <popover></popover>
+                                    </button>
+                                </div>
 
-                                        <button type="button" class="btn-group__item ">
-
-                                            До талии
-
+                                <div class="btn-group">
+                                    <div class="btn-group__item">
+                                        <button type="button">
+                                            3/4
                                             <popover></popover>
                                         </button>
+                                    </div>
 
-                                        <button type="button" class="btn-group__item ">
+                                    <div class="btn-group__item">
+                                        <button type="button">
+                                            длину
+                                            <popover></popover>
+                                        </button>
+                                    </div>
+
+                                    <div class="btn-group__item">
+                                        <button type="button">
                                             Всю длину
                                             <popover></popover>
                                         </button>
                                         <info-popover></info-popover>
                                     </div>
+                                </div>
 
-                                    <div class="option-block__title option-block__title_sm">
-                                        Воротник
-                                    </div>
+                                <div class="option-block__title option-block__title_sm">
+                                    Воротник
+                                </div>
 
-                                    <button type="button" class="btn-group__item ">
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         Стойка
-
                                         <popover></popover>
                                     </button>
-
-                                    <button type="button" class="btn-group__item ">
+                                </div>
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         Английский
-
                                         <popover></popover>
                                     </button>
+                                </div>
 
-                                    <div class="option-block__title option-block__title_sm">
-                                        Рукава
-                                    </div>
 
-                                    <button type="button" class="btn-group__item ">
+
+                                <div class="option-block__title option-block__title_sm">
+                                    Рукава
+                                </div>
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         3/4
-
                                         <popover></popover>
                                     </button>
-
-                                    <button type="button" class="btn-group__item ">
+                                </div>
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         Стандартные
-
                                         <popover></popover>
                                     </button>
+                                </div>
 
-                                    <div class="option-block__title option-block__title_sm">
-                                        Завязки (пояс)
-                                    </div>
 
-                                    <button type="button" class="btn-group__item ">
+
+                                <div class="option-block__title option-block__title_sm">
+                                    Завязки (пояс)
+                                </div>
+
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         В боковых швах
-
                                         <popover></popover>
                                     </button>
+                                </div>
 
-                                    <div class="option-block__title option-block__title_sm">
-                                        Карманы
-                                    </div>
 
-                                    <button type="button" class="btn-group__item ">
+
+                                <div class="option-block__title option-block__title_sm">
+                                    Карманы
+                                </div>
+
+                                <div class="btn-group__item">
+                                    <button type="button">
                                         В боковых швах
-
                                         <popover></popover>
                                     </button>
                                 </div>
@@ -533,85 +571,97 @@
                     <div class="option-block__content">
 
                         <div class="btn-group">
-                            <div class="btn-group__items">
-                                <button type="button" class="btn-group__item">
-                                    Декоративный кармашек
 
-                                    <popover></popover>
-                                </button>
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Декоративный кармашек
+                                        <popover></popover>
+                                    </button>
+                                </div>
 
-                                <button type="button" class="btn-group__item">
-                                    Поясок
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Поясок
+                                        <popover>
+                                            <template #slide-items>
+                                                <div class="product-slider__img"><img
+                                                        src="./assets/images/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+                                    </button>
+                                </div>
 
-                                    <popover>
-                                        <template #slide-items>
-                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                        </template>
-                                    </popover>
-                                </button>
 
-                            </div>
 
-                            <div class="btn-group__items">
-                                <button type="button" class="btn-group__item">
-                                    Молния для кормления
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Молния для кормления
+                                        <popover></popover>
+                                    </button>
+                                </div>
 
-                                    <popover></popover>
-                                </button>
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Шопер
+                                        <popover>
+                                            <template #slide-items>
+                                                <div class="product-slider__img"><img
+                                                        src="./assets/images/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+                                    </button>
+                                </div>
 
-                                <button type="button" class="btn-group__item">
-                                    Шопер
 
-                                    <popover>
-                                        <template #slide-items>
-                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                        </template>
-                                    </popover>
-                                </button>
 
-                            </div>
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Кармашек с вышивкой
+                                        <popover></popover>
+                                    </button>
+                                </div>
 
-                            <div class="btn-group__items">
-                                <button type="button" class="btn-group__item">
-                                    Кармашек с вышивкой
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Кардиган
+                                        <popover>
+                                            <template #slide-items>
+                                                <div class="product-slider__img"><img
+                                                        src="./assets/images/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+                                    </button>
+                                </div>
 
-                                    <popover></popover>
-                                </button>
 
-                                <button type="button" class="btn-group__item">
-                                    Кардиган
 
-                                    <popover>
-                                        <template #slide-items>
-                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                        </template>
-                                    </popover>
-                                </button>
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Резинки для волос
+                                        <popover></popover>
+                                    </button>
+                                </div>
 
-                            </div>
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        Нижняя юбка
+                                        <popover>
+                                            <template #slide-items>
+                                                <div class="product-slider__img"><img
+                                                        src="./assets/images/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+                                    </button>
+                                </div>
 
-                            <div class="btn-group__items">
-                                <button type="button" class="btn-group__item">
-                                    Резинки для волос
-
-                                    <popover></popover>
-                                </button>
-
-                                <button type="button" class="btn-group__item">
-                                    Нижняя юбка
-
-                                    <popover>
-                                        <template #slide-items>
-                                            <div class="product-slider__img"><img src="./assets/images/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                        </template>
-                                    </popover>
-                                </button>
-
-                            </div>
 
                         </div>
 
@@ -667,8 +717,8 @@
                                             </li>
                                             <li class="result-list__item">Горчичный</li>
                                             <li class="result-list__item">Без принта</li>
-                                            <li class="result-list__item unselected">–</li>
-                                            <li class="result-list__item">Выберите размер</li>
+                                            <li class="result-list__item">–</li>
+                                            <li class="result-list__item unselected">Выберите размер</li>
                                             <li class="result-list__item">–</li>
                                         </ul>
                                     </div>
@@ -736,9 +786,9 @@
                                 Дополнительно вы выбрали
                             </div>
 
-                           <!-- <div class="option-block__title option-block__title_sm unselected padding-top-17 padding-bottom-17">
-                                Выберите аксессуары и фурнитуру дополнительно к платью выше.
-                            </div>-->
+                            <!-- <div class="option-block__title option-block__title_sm unselected padding-top-17 padding-bottom-17">
+                                 Выберите аксессуары и фурнитуру дополнительно к платью выше.
+                             </div>-->
 
                             <div class="selection-result">
 
@@ -872,6 +922,7 @@
             }
         }
     }
+
 
 
 </script>

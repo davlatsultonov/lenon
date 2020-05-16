@@ -1,27 +1,62 @@
 .btn-group {
 
+
   &__item {
+    display: inline-block;
     vertical-align: top;
-    height: 30px;
-    background-color: #ffffff;
-    color: #000;
-    line-height: 1.2;
-    border-radius: 3px;
-    border: none;
-    box-shadow: $button-shadow;
-    font-size: 12px;
-    font-weight: 500;
-    transition: $btn-transition;
-    padding: 0 8px 0 16px;
-    margin-bottom: 14px;
+    position: relative;
 
     &:not(:last-child) {
       margin-right: 10px;
+      margin-bottom: 14px;
     }
 
-    &:hover {
-      background-color: #f1f1f1;
-      cursor: pointer;
+    > button {
+      vertical-align: top;
+      height: 30px;
+      background-color: #ffffff;
+      color: #000;
+      line-height: 1.2;
+      border-radius: 3px;
+      border: none;
+      box-shadow: $button-shadow;
+      font-size: 12px;
+      font-weight: 500;
+      transition: $btn-transition;
+      padding: 0 8px 0 16px;
+
+
+      &:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+
+      &.active {
+        border: 2px solid $active-color;
+        box-shadow: none;
+
+        .btn-group__item_preview {
+          vertical-align: sub;
+          height: 20px;
+          padding-top: 7px;
+          padding-left: 8px;
+          right: -8px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &.disabled {
+        opacity: 0.5;
+
+        &:hover {
+          background-color: #ffffff;
+        }
+      }
+
     }
 
     &_preview {
@@ -36,40 +71,35 @@
     }
 
     &_xs {
-      min-width: 48px;
-      text-transform: uppercase;
-      padding: 0 5px;
+
+      > button {
+        min-width: 48px;
+        text-transform: uppercase;
+        padding: 0 5px;
+      }
+
     }
 
     &_sm {
-      min-width: 105px;
-      padding: 0 16px;
-    }
 
-    &.active {
-
-      .btn-group__item_preview {
-        vertical-align: sub;
-        height: 20px;
-        padding-top: 7px;
-        padding-left: 8px;
-        right: -8px;
-      }
-
-      &:hover {
-        opacity: 1;
+      > button {
+        min-width: 105px;
+        padding: 0 16px;
       }
     }
 
-    &.disabled {
-      opacity: 0.5;
-
-      &:hover {
-        background-color: #ffffff;
-      }
-    }
 
     &_result {
+      display: inline;
+      background-color: #ffffff;
+      color: #000;
+      line-height: 1.2;
+      border-radius: 3px;
+      box-shadow: $button-shadow;
+      font-size: 12px;
+      font-weight: 500;
+      transition: $btn-transition;
+      margin-bottom: 14px;
       padding: 13px 18px 14px;
       text-decoration: none;
 
@@ -87,11 +117,13 @@
       }
     }
 
+    .info-popover {
+      position: absolute;
+      top: -11px;
+      right: -19px;
+    }
 
   }
 
-  .info-popover {
-    top: -11px;
-    left: -9px;
-  }
+
 }
