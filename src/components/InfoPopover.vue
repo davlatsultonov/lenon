@@ -7,7 +7,7 @@
         </div>
 
         <span class="info-popover__item" slot="reference">
-            <img src="../assets/images/icons/question.svg" alt="question-icon">
+            <img src="../img/icons/question.svg" alt="question-icon">
         </span>
     </popper>
 </template>

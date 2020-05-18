@@ -13,7 +13,7 @@
                 <div class="popover__close"  @click="close">
                     Закрыть
                     <div class="popover__close-icon">
-                        <img src="../assets/images/icons/close.svg" alt="close-icon">
+                        <img src="../img/icons/close.svg" alt="close-icon">
                     </div>
                 </div>
             </div>
@@ -22,12 +22,12 @@
 
                 <div class="video-popover__item">
                     <slot>
-                        <img src="../assets/images/video-bg.png" alt="" height="200">
+                        <img src="../img/video-bg.png" alt="" height="200">
                     </slot>
 
                     <div class="video-items">
                         <a href="#" class="" class="video-items__btn">
-                            <img src="../assets/images/icons/video-play-icon.svg" alt="video-play-icon">
+                            <img src="../img/icons/video-play-icon.svg" alt="video-play-icon">
                             <span>
                                 Смотреть
                             </span>
@@ -51,7 +51,7 @@
             </a>
 
             <span class="column-link__icon icon-play" >
-                <img src="../assets/images/icons/play.svg" alt="icon-play">
+                <img src="../img/icons/play.svg" alt="icon-play">
             </span>
 
         </div>

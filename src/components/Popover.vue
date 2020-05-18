@@ -21,7 +21,7 @@
                 <div class="popover__close"  @click="close">
                     Закрыть
                     <div class="popover__close-icon">
-                        <img src="../assets/images/icons/close.svg" alt="close-icon">
+                        <img src="../img/icons/close.svg" alt="close-icon">
                     </div>
                 </div>
             </div>
@@ -32,8 +32,8 @@
 
                     <div class="product-slider__item product-slider__item_full-height">
                         <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
-                            <slot name="slide-items">
-                                <div class="product-slider__img"><img src="../assets/images/popover-img.png"/></div>
+                            <slot>
+                                <div class="product-slider__img"><img src="../img/popover-img.png"/></div>
                             </slot>
                         </VueSlickCarousel>
                     </div>
@@ -44,7 +44,7 @@
         </div>
 
         <span class="btn-group__item_preview" slot="reference" >
-            <img src="../assets/images/icons/eye.svg" alt="icon-eye">
+            <img src="../img/icons/eye.svg" alt="icon-eye">
         </span>
     </popper>
 </template>

@@ -6,23 +6,23 @@
     vertical-align: top;
     position: relative;
 
+
     &:not(:last-child) {
       margin-right: 10px;
       margin-bottom: 12px;
     }
 
     > button {
-      vertical-align: top;
+      line-height: 17px;
       height: 30px;
       background-color: #ffffff;
       color: #000;
-      line-height: 1.2;
       border-radius: 3px;
-      border: none;
-      box-shadow: $button-shadow;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      border: 2px solid transparent;
       font-size: 12px;
       font-weight: 500;
-      transition: $btn-transition;
+      transition: background 0.175s ease-in;
       padding: 0 8px 0 16px;
 
 
@@ -38,10 +38,6 @@
 
         .btn-group__item_preview {
           vertical-align: sub;
-          height: 20px;
-          padding-top: 7px;
-          padding-left: 8px;
-          right: -8px;
         }
 
         &:hover {
@@ -49,8 +45,13 @@
         }
       }
 
-      &.disabled {
+      &:disabled,
+      &[disabled]{
         opacity: 0.5;
+
+        .popper {
+          display: none;
+        }
 
         &:hover {
           background-color: #ffffff;
@@ -60,14 +61,13 @@
     }
 
     &_preview {
+      vertical-align: sub;
       display: inline-block;
-      vertical-align: middle;
-      height: 22px;
+      height: 19px;
       border-left: 1px solid #d5d5d5;
       position: relative;
       right: -7px;
-      padding: 9px 9px 0 9px;
-
+      padding: 4px 5px 0 7px;
     }
 
     &_xs {
@@ -118,9 +118,7 @@
     }
 
     .info-popover {
-      position: absolute;
-      top: -11px;
-      right: -19px;
+      right: -2px;
     }
 
   }

@@ -4,7 +4,7 @@
 
         <header class="header">
             <div class="logo">
-                <img src="./assets/images/icons/logo.svg" alt="logo">
+                <img src="./img/icons/logo.svg" alt="logo">
             </div>
         </header>
 
@@ -16,8 +16,8 @@
 
                         <div class="product-slider__item product-slider__item_upper">
                             <VueSlickCarousel :arrows="true" :fade="true" :infinite="true">
-                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/></div>
-                                <div class="product-slider__img"><img src="./assets/images/upper-white.png"/></div>
+                                <div class="product-slider__img"><img src="./img/upper-part.png"/></div>
+                                <div class="product-slider__img"><img src="./img/upper-white.png"/></div>
                             </VueSlickCarousel>
                         </div>
 
@@ -26,16 +26,16 @@
                                 <div class="product-slider__img">
                                     <div style="width: 100%; height: 100%; background-color: #353228"></div>
                                 </div>
-                                <div class="product-slider__img"><img src="./assets/images/lower-part.png"/></div>
+                                <div class="product-slider__img"><img src="./img/lower-part.png"/></div>
                             </VueSlickCarousel>
                         </div>
 
                         <div class="product-slider__separater">
-                            <img src="./assets/images/slider-line.svg" alt="slider-line">
+                            <img src="./img/slider-line.svg" alt="slider-line">
                         </div>
 
                         <button type="button" class="product-slider__expand-btn">
-                            <img src="./assets/images/icons/expand-icon.svg" alt="expand-icon">
+                            <img src="./img/icons/expand-icon.svg" alt="expand-icon">
                         </button>
                     </div>
                 </div>
@@ -53,30 +53,15 @@
                             <div class="product-style">
                                 <div class="product-style__items">
 
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn active">
-                                            <img class="product-style__icon" src="./assets/images/icons/straight.svg"
+                                    <div class="product-style__item"
+                                         v-for="(fashion, index) in styles.dressFachion.types" :key="fashion + index">
+                                        <button class="product-style__btn" :class="{ active: fashion === styles.dressFachion.currentType }"
+                                                @click="styles.dressFachion.currentType = fashion">
+                                            <img class="product-style__icon" :src="getImgUrl(fashion.src)"
                                                  alt="straight-icon">
                                         </button>
-                                        <div class="product-style__text">Прямое</div>
+                                        <div class="product-style__text">{{ fashion.text }}</div>
                                     </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/icons/trapezoid.svg"
-                                                 alt="trapezoid-icon">
-                                        </button>
-                                        <div class="product-style__text">Трапеция</div>
-                                    </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/icons/cutting.svg"
-                                                 alt="cutting-icon">
-                                        </button>
-                                        <div class="product-style__text">Отрезное</div>
-                                    </div>
-
                                 </div>
                             </div>
 
@@ -84,93 +69,23 @@
                                 Выберите цвет верха
                             </div>
 
-
                             <ul class="color-picker color-picker__container">
-                                <li class="color-picker__item checked">
-                                    <span style="background-color: #543c31;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #8A2220;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #A2522F;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #C4867B;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #C38120;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #365130;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #004C4B;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #004C4B;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #154F90;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #5989B9;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #F3F4F5;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #C8C7C0;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #353228;"></span>
+                                <li class="color-picker__item" v-for="(color, index) in colorsPalette.colors"
+                                    :key="index" :class="{ checked: color === colorsPalette.currentUpColor}">
+                                    <span :style="{ 'background-color': color }"
+                                          @click="colorsPalette.currentUpColor = color"></span>
                                 </li>
                             </ul>
-
 
                             <div class="option-block__title option-block__title_m-top">
                                 Выберите цвет юбки
                             </div>
 
                             <ul class="color-picker color-picker__container">
-                                <li class="color-picker__item">
-                                    <span style="background-color: #543c31;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #8A2220;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #A2522F;"></span>
-                                </li>
-                                <li class="color-picker__item checked">
-                                    <span style="background-color: #C4867B;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #C38120;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #365130;"></span>
-                                </li>
-                                <li class="color-picker__item ">
-                                    <span style="background-color: #004C4B;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #004C4B;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #154F90;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #5989B9;"></span>
-                                </li>
-                                <li class="color-picker__item ">
-                                    <span style="background-color: #F3F4F5;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #C8C7C0;"></span>
-                                </li>
-                                <li class="color-picker__item">
-                                    <span style="background-color: #353228;"></span>
+                                <li class="color-picker__item" v-for="(color, index) in colorsPalette.colors"
+                                    :key="index" :class="{ checked: color === colorsPalette.currentSkirtColor}">
+                                    <span :style="{ 'background-color': color }"
+                                          @click="colorsPalette.currentSkirtColor = color"></span>
                                 </li>
                             </ul>
 
@@ -180,101 +95,36 @@
 
                             <div class="btn-group padding-top-7">
 
-                                    <div class="btn-group__item btn-group__item_sm">
-                                        <button type="button" class="active">
-                                            Без принта
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_sm">
-                                        <button type="button">
-                                            До пояса
-                                        </button>
-                                    </div>
-                                    <div class="btn-group__item btn-group__item_sm">
-                                        <button type="button">
-                                            Полностью
-                                        </button>
-                                    </div>
+                                <div class="btn-group__item btn-group__item_sm"
+                                     v-for="(print, index) in printType.types" :key="index">
+                                    <button type="button" :class="{ active:  print === printType.currentType }"
+                                            @click="printType.currentType = print">
+                                        {{ print }}
+                                    </button>
+                                </div>
 
                             </div>
 
-                            <div class="product-style product-style_patterns">
-                                <div class="product-style__items">
 
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn active">
-                                            <img class="product-style__icon" src="./assets/images/patterns/pattern.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
+                            <div class="product-style  product-style_patterns">
 
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/leaves.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
 
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/leaves-2.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/ship.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/birds.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                                <div class="product-style__items">
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/horse.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/whales.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/fox.svg"
-                                                 alt="pattern-icon">
-                                        </button>
-                                    </div>
-
-                                    <div class="product-style__item">
-                                        <button class="product-style__btn">
-                                            <img class="product-style__icon" src="./assets/images/patterns/deer.svg"
-                                                 alt="pattern-icon">
+                                    <div class="product-style__item" v-for="(pattern, index) in styles.patterns.type"
+                                         :key="pattern + index">
+                                        <button class="product-style__btn" :class="{ active: pattern === styles.patterns.currentType }"
+                                                @click="styles.patterns.currentType = pattern">
+                                                <img class="product-style__icon" :src="getImgUrl(pattern)"
+                                                 >
                                         </button>
                                     </div>
 
                                     <div class="product-style__item">
                                         <div class="product-style__btn product-style__link">
-                                            <a href="#">еще <span>+10</span></a>
+                                            <a href="#" @click.prevent>еще <span>+10</span></a>
                                         </div>
                                     </div>
 
-                                </div>
+
                             </div>
 
                         </div>
@@ -288,7 +138,7 @@
                 <div class="product-note">
                     <div class="product-note__items">
                         <div class="product-note__icon">
-                            <img src="./assets/images/icons/bell.svg" alt="bell-icon">
+                            <img src="./img/icons/bell.svg" alt="bell-icon">
                         </div>
 
                         <div class="product-note__description">
@@ -316,8 +166,10 @@
 
                             <div class="btn-group">
 
-                                <div class="btn-group__item btn-group__item_sm" v-for="(type, index) in sizeType.types" :key="index">
-                                    <button type="button" :class="{ active:  type === sizeType.currentType }" @click="sizeType.currentType = type">
+                                <div class="btn-group__item btn-group__item_sm" v-for="(type, index) in sizeType.types"
+                                     :key="type + index">
+                                    <button type="button" :class="{ active:  type === sizeType.currentType }"
+                                            @click="sizeType.currentType = type">
                                         {{ type }}
                                     </button>
                                 </div>
@@ -335,11 +187,13 @@
 
                             <div class="btn-group">
 
-                                    <div class="btn-group__item btn-group__item_xs" v-for="(size, index) in euroSize.size" :key="index">
-                                        <button type="button" :class="{ active:  size === euroSize.currentSize }" @click="euroSize.currentSize = size">
-                                            {{ size }}
-                                        </button>
-                                    </div>
+                                <div class="btn-group__item btn-group__item_xs" v-for="(size, index) in euroSize.size"
+                                     :key="size + index">
+                                    <button type="button" :class="{ active:  size === euroSize.currentSize }"
+                                            @click="euroSize.currentSize = size">
+                                        {{ size }}
+                                    </button>
+                                </div>
 
                             </div>
 
@@ -350,8 +204,10 @@
                             </div>
 
                             <div class="btn-group">
-                                <div class="btn-group__item btn-group__item_xs" v-for="(h, index) in bodyHeight.height" :key="index">
-                                    <button type="button" :class="{ active: h === bodyHeight.currentHeigt }" @click="bodyHeight.currentHeigt = h">
+                                <div class="btn-group__item btn-group__item_xs" v-for="(h, index) in bodyHeight.height"
+                                     :key="index">
+                                    <button type="button" :class="{ active: h === bodyHeight.currentHeigt }"
+                                            @click="bodyHeight.currentHeigt = h">
                                         {{ h }}
                                     </button>
                                 </div>
@@ -394,7 +250,8 @@
                                         Длина платья до талии
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures.waist">
+                                    <input type="text" class="input-group__item" placeholder="см"
+                                           v-model.number="measures.waist">
                                 </div>
 
                                 <div class="input-group__container input-group__container_md">
@@ -402,7 +259,8 @@
                                         Длина всего платья от плеча
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures.shoulder">
+                                    <input type="text" class="input-group__item" placeholder="см"
+                                           v-model.number="measures.shoulder">
                                 </div>
                             </div>
 
@@ -412,7 +270,8 @@
                                         Обхват груди
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['chest-girth']">
+                                    <input type="text" class="input-group__item" placeholder="см"
+                                           v-model.number="measures['chest-girth']">
                                 </div>
 
                                 <div class="input-group__container input-group__container_xs">
@@ -420,7 +279,8 @@
                                         Обхват талии
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['waist-girth']">
+                                    <input type="text" class="input-group__item" placeholder="см"
+                                           v-model.number="measures['waist-girth']">
                                 </div>
 
                                 <div class="input-group__container input-group__container_xs">
@@ -428,7 +288,8 @@
                                         Обхват бедер
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['hip-girth']">
+                                    <input type="text" class="input-group__item" placeholder="см"
+                                           v-model.number="measures['hip-girth']">
                                 </div>
 
                                 <div class="input-group__container input-group__container_xs">
@@ -436,13 +297,15 @@
                                         Обхват руки
                                     </div>
 
-                                    <input type="text" class="input-group__item" placeholder="см" v-model.number="measures['hand-girth']">
+                                    <input type="text" class="input-group__item" placeholder="см"
+                                           v-model.number="measures['hand-girth']">
                                 </div>
                             </div>
 
                             <div class="product-note">
                                 <div class="product-note__description">
-                                    <a href="#" @click.prevent="resetMeasures">Сбросить показатели</a> если хотите выбрать стандартный размер
+                                    <a href="#" @click.prevent="resetMeasures">Сбросить показатели</a> если хотите
+                                    выбрать стандартный размер
                                 </div>
                             </div>
 
@@ -470,8 +333,29 @@
                                     Пуговки
                                 </div>
 
+                                <div class="btn-group__item" v-for="(dressButton, index) in dressButtons.types"
+                                     :key="dressButton.text + index">
+                                    <button type="button" :class="{ active: dressButton === dressButtons.currentType}"
+                                            @click="dressButtons.currentType = dressButton"
+                                            :disabled="dressButton.isDisabled">
+                                        {{ dressButton.text }}
 
-                                <div class="btn-group__item">
+                                        <popover>
+                                            <template v-if="dressButton.hasPopover">
+                                                <div class="product-slider__img"><img
+                                                        src="./img/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img
+                                                        src="./img/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+
+                                    </button>
+                                    <info-popover v-if="dressButton.hasInfo"></info-popover>
+                                </div>
+
+
+                                <!--<div class="btn-group__item">
                                     <button type="button">
                                         На груди
                                         <popover></popover>
@@ -485,35 +369,55 @@
                                     </button>
                                 </div>
 
-                                <div class="btn-group">
-                                    <div class="btn-group__item">
-                                        <button type="button">
-                                            3/4
-                                            <popover></popover>
-                                        </button>
-                                    </div>
+                                <br>
 
-                                    <div class="btn-group__item">
-                                        <button type="button">
-                                            До талии
-                                            <popover></popover>
-                                        </button>
-                                    </div>
-
-                                    <div class="btn-group__item">
-                                        <button type="button" class="disabled">
-                                            Всю длину
-                                            <popover></popover>
-                                        </button>
-                                        <info-popover></info-popover>
-                                    </div>
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        3/4
+                                        <popover></popover>
+                                    </button>
                                 </div>
+
+                                <div class="btn-group__item">
+                                    <button type="button">
+                                        До талии
+                                        <popover></popover>
+                                    </button>
+                                </div>
+
+                                <div class="btn-group__item">
+                                    <button type="button" class="disabled">
+                                        Всю длину
+                                        <popover></popover>
+                                    </button>
+                                    <info-popover></info-popover>
+                                </div>-->
 
                                 <div class="option-block__title option-block__title_sm">
                                     Воротник
                                 </div>
 
-                                <div class="btn-group__item">
+
+                                <div class="btn-group__item" v-for="(collarItem, index) in collar.types"
+                                     :key="collarItem.text + index">
+                                    <button type="button" :class="{ active: collarItem === collar.currentType}"
+                                            @click="collar.currentType = collarItem" :disabled="collarItem.isDisabled">
+                                        {{ collarItem.text }}
+
+                                        <popover>
+                                            <template v-if="collarItem.hasPopover">
+                                                <div class="product-slider__img"><img
+                                                        src="./img/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img
+                                                        src="./img/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+
+                                    </button>
+                                    <info-popover v-if="collarItem.hasInfo"></info-popover>
+                                </div>
+                                <!--<div class="btn-group__item">
                                     <button type="button">
                                         Стойка
                                         <popover></popover>
@@ -524,51 +428,82 @@
                                         Английский
                                         <popover></popover>
                                     </button>
-                                </div>
-
+                                </div>-->
 
 
                                 <div class="option-block__title option-block__title_sm">
                                     Рукава
                                 </div>
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        3/4
-                                        <popover></popover>
-                                    </button>
-                                </div>
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Стандартные
-                                        <popover></popover>
-                                    </button>
-                                </div>
 
+                                <div class="btn-group__item" v-for="(sleeve, index) in sleeves.types"
+                                     :key="sleeve.text + index">
+                                    <button type="button" :class="{ active: sleeve === sleeves.currentType}"
+                                            @click="sleeves.currentType = sleeve" :disabled="sleeve.isDisabled">
+                                        {{ sleeve.text }}
 
+                                        <popover>
+                                            <template v-if="sleeve.hasPopover">
+                                                <div class="product-slider__img"><img
+                                                        src="./img/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img
+                                                        src="./img/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+
+                                    </button>
+                                    <info-popover v-if="sleeve.hasInfo"></info-popover>
+                                </div>
 
                                 <div class="option-block__title option-block__title_sm">
                                     Завязки (пояс)
                                 </div>
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        В боковых швах
-                                        <popover></popover>
-                                    </button>
-                                </div>
+                                <div class="btn-group__item" v-for="(belt, index) in belts.types"
+                                     :key="belt.text + index + index">
+                                    <button type="button" :class="{ active: belt === belts.currentType}"
+                                            @click="belts.currentType = belt" :disabled="belt.isDisabled">
+                                        {{ belt.text }}
 
+                                        <popover>
+                                            <template v-if="belt.hasPopover">
+                                                <div class="product-slider__img"><img
+                                                        src="./img/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img
+                                                        src="./img/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+
+                                    </button>
+                                    <info-popover v-if="belt.hasInfo"></info-popover>
+                                </div>
 
 
                                 <div class="option-block__title option-block__title_sm">
                                     Карманы
                                 </div>
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        В боковых швах
-                                        <popover></popover>
+                                <div class="btn-group__item" v-for="(pocket, index) in pockets.types"
+                                     :key="pocket.text + index">
+                                    <button type="button" :class="{ active: pocket === pockets.currentType}"
+                                            @click="pockets.currentType = pocket" :disabled="pocket.isDisabled">
+                                        {{ pocket.text }}
+
+                                        <popover>
+                                            <template v-if="pocket.hasPopover">
+                                                <div class="product-slider__img"><img
+                                                        src="./img/popover-img.png"/></div>
+                                                <div class="product-slider__img"><img
+                                                        src="./img/upper-part.png"/>
+                                                </div>
+                                            </template>
+                                        </popover>
+
                                     </button>
+                                    <info-popover v-if="pocket.hasInfo"></info-popover>
                                 </div>
+
                             </div>
 
                         </div>
@@ -586,95 +521,95 @@
 
                         <div class="btn-group">
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Декоративный кармашек
-                                        <popover></popover>
-                                    </button>
-                                </div>
+                            <div class="btn-group__item" v-for="(supplement, index) in supplements" :key="index">
+                                <button type="button" :class="{ active: supplement.checked }"
+                                        @click="supplement.checked = !supplement.checked">
+                                    {{ supplement.text }}
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Поясок
-                                        <popover>
-                                            <template #slide-items>
-                                                <div class="product-slider__img"><img
-                                                        src="./assets/images/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
-                                    </button>
-                                </div>
+                                    <popover>
+                                        <template v-if="supplement.hasPopover">
+                                            <div class="product-slider__img"><img
+                                                    src="./img/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img src="./img/upper-part.png"/>
+                                            </div>
+                                        </template>
+                                    </popover>
+                                </button>
+                            </div>
 
+                            <!--<div class="btn-group__item">
+                                <button type="button">
+                                    Поясок
+                                    <popover>
 
+                                        <div class="product-slider__img"><img
+                                                src="./img/popover-img.png"/></div>
+                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
+                                        </div>
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Молния для кормления
-                                        <popover></popover>
-                                    </button>
-                                </div>
-
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Шопер
-                                        <popover>
-                                            <template #slide-items>
-                                                <div class="product-slider__img"><img
-                                                        src="./assets/images/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
-                                    </button>
-                                </div>
+                                    </popover>
+                                </button>
+                            </div>
 
 
+                            <div class="btn-group__item">
+                                <button type="button">
+                                    Молния для кормления
+                                    <popover></popover>
+                                </button>
+                            </div>
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Кармашек с вышивкой
-                                        <popover></popover>
-                                    </button>
-                                </div>
-
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Кардиган
-                                        <popover>
-                                            <template #slide-items>
-                                                <div class="product-slider__img"><img
-                                                        src="./assets/images/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
-                                    </button>
-                                </div>
+                            <div class="btn-group__item">
+                                <button type="button">
+                                    Шопер
+                                    <popover>
+                                        <div class="product-slider__img"><img
+                                                src="./img/popover-img.png"/></div>
+                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
+                                        </div>
+                                    </popover>
+                                </button>
+                            </div>
 
 
+                            <div class="btn-group__item">
+                                <button type="button">
+                                    Кармашек с вышивкой
+                                    <popover></popover>
+                                </button>
+                            </div>
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Резинки для волос
-                                        <popover></popover>
-                                    </button>
-                                </div>
+                            <div class="btn-group__item">
+                                <button type="button">
+                                    Кардиган
+                                    <popover>
+                                        <div class="product-slider__img"><img
+                                                src="./img/popover-img.png"/></div>
+                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
+                                        </div>
+                                    </popover>
+                                </button>
+                            </div>
 
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Нижняя юбка
-                                        <popover>
-                                            <template #slide-items>
-                                                <div class="product-slider__img"><img
-                                                        src="./assets/images/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img src="./assets/images/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
-                                    </button>
-                                </div>
+
+                            <div class="btn-group__item">
+                                <button type="button">
+                                    Резинки для волос
+                                    <popover></popover>
+                                </button>
+                            </div>
+
+                            <div class="btn-group__item">
+                                <button type="button">
+                                    Нижняя юбка
+                                    <popover>
+                                        <div class="product-slider__img"><img
+                                                src="./img/popover-img.png"/></div>
+                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
+                                        </div>
+                                    </popover>
+                                </button>
+                            </div>-->
 
 
                         </div>
@@ -791,7 +726,7 @@
                         </div>
 
                         <div class="option-block__title option-block__title_bold margin-bottom-15">
-                            Цена платья: <span>5 000</span> руб.
+                            Цена платья: 5 000 руб. + 500 руб. <span>за допошив</span>
                         </div>
 
                         <div class="option-block__content">
@@ -852,7 +787,7 @@
                             </div>
 
                             <div class="option-block__title option-block__title_bold">
-                                Цена всех дополнений: 0 руб.
+                                Цена всех дополнений: 900 руб.
                             </div>
 
 
@@ -914,7 +849,6 @@
     import SizePopover from './components/SizePopover'
     import Popover from './components/Popover'
 
-
     export default {
         name: 'App',
         components: {
@@ -934,6 +868,10 @@
                     "hip-girth": '',
                     "hand-girth": '',
                 },
+                printType: {
+                    types: ['Без принта', 'До пояса', 'Полностью'],
+                    currentType: ''
+                },
                 sizeType: {
                     types: ['Взрослое', 'Детское'],
                     currentType: ''
@@ -946,15 +884,85 @@
                     height: [150, 160, 170, 180, 190],
                     currentHeigt: 0,
                 },
+                colorsPalette: {
+                    colors: ['#543c31', '#8A2220', '#A2522F', '#C4867B', '#C38120', '#365130', '#004C4B', '#154F90', '#5989B9', '#F3F4F5', '#C8C7C0', '#353228'],
+                    currentColor: '',
+                    currentUpColor: '',
+                    currentSkirtColor: ''
+                },
+                styles: {
+                    dressFachion: {
+                        types: [
+                            {src: 'straight', text: 'Прямое'},
+                            {src: 'trapezoid', text: 'Трапеция'},
+                            {src: 'cutting', text: 'Отрезное'},
+                        ],
+                        currentType: ''
+                    },
+                    patterns: {
+                        type: ['birds', 'deer', 'fox', 'horse', 'leaves', 'leaves-2', 'pattern', 'ship', 'whales'],
+                        currentType: ''
+                    }
+                },
+                supplements: [
+                    {text: 'Декоративный кармашек', hasPopover: false, checked: false},
+                    {text: 'Поясок', hasPopover: false, checked: false},
+                    {text: 'Молния для кормления', hasPopover: false, checked: false},
+                    {text: 'Шопер', hasPopover: false, checked: false},
+                    {text: 'Кармашек с вышивкой', hasPopover: false, checked: false},
+                    {text: 'Кардиган', hasPopover: true, checked: false},
+                    {text: 'Резинки для волос', hasPopover: false, checked: false},
+                    {text: 'Нижняя юбка', hasPopover: false, checked: false}
+                ],
+                dressButtons: {
+                    types: [
+                        {text: 'На груди', hasPopover: true, hasInfo: false, isDisabled: false},
+                        {text: 'На спине', hasPopover: false, hasInfo: false, isDisabled: false},
+                        {text: '3/4', hasPopover: true, hasInfo: false, isDisabled: false},
+                        {text: 'До талии', hasPopover: false, hasInfo: false, isDisabled: false},
+                        {text: 'Всю длину', hasPopover: false, hasInfo: true, isDisabled: true}
+                    ],
+                    currentType: ''
+                },
+                collar: {
+                    types: [
+                        {text: 'Стойка', hasPopover: true, hasInfo: false, isDisabled: false},
+                        {text: 'Английский', hasPopover: false, hasInfo: false, isDisabled: false}
+                    ],
+                    currentType: ''
+                },
+                sleeves: {
+                    types: [
+                        {text: '3/4', hasPopover: true, hasInfo: false, isDisabled: false},
+                        {text: 'Стандартные', hasPopover: false, hasInfo: false, isDisabled: false}
+                    ],
+                    currentType: ''
+                },
+                belts: {
+                    types: [
+                        {text: 'В боковых швах', hasPopover: true, hasInfo: false, isDisabled: false},
+                    ],
+                    currentType: ''
+                },
+                pockets: {
+                    types: [
+                        {text: 'В боковых швах', hasPopover: true, hasInfo: false, isDisabled: false},
+                    ],
+                    currentType: ''
+                }
+
             }
         },
         methods: {
             resetMeasures() {
                 Object.keys(this.measures).forEach(key => this.measures[key] = "");
+            },
+            getImgUrl(pet) {
+                var images = require.context('./img/', false, /\.svg/);
+                return images('./' + pet + ".svg")
             }
         }
     }
-
 
 
 </script>

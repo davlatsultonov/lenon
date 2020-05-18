@@ -10,10 +10,10 @@
                     Видео-инструкция
                 </div>
 
-                <div class="popover__close"  @click="close">
+                <div class="popover__close" @click="close">
                     Закрыть
                     <div class="popover__close-icon">
-                        <img src="../assets/images/icons/close.svg" alt="close-icon">
+                        <img src="../img/icons/close.svg" alt="close-icon">
                     </div>
                 </div>
             </div>
@@ -27,9 +27,9 @@
                             <VueSlickCarousel :arrows="true" :fade="true" :infinite="true" :dots="true">
                                 <slot name="slide-items">
                                     <div class="product-slider__img"><img
-                                            src="../assets/images/popover-img.png"/></div>
+                                            src="../img/popover-img.png"/></div>
                                     <div class="product-slider__img"><img
-                                            src="../assets/images/upper-part.png"/></div>
+                                            src="../img/upper-part.png"/></div>
                                 </slot>
                             </VueSlickCarousel>
                         </div>
@@ -40,77 +40,23 @@
                 <slot name="popover__content_right">
                     <div class="product-style ">
 
-                        <div class="product-style__item">
-                            <button class="product-style__btn active">
-                                <img class="product-style__icon"
-                                     src="../assets/images/icons/popover-size-img.png"
-                                     alt="straight-icon">
+                        <div class="product-style__item" v-for="(size, index) in dressStyles.types"
+                             :key="size + index">
+                            <button class="product-style__btn" :class="{ active: size === dressStyles.currentType }"
+                                    @click="dressStyles.currentType = size">
+                                <img class="product-style__icon" :src="getImgUrl(size.src)"
+                                     >
                                 <div class="product-style__checked"><span></span></div>
                             </button>
 
-                            <div class="product-style__text">M</div>
-                        </div>
-
-                        <div class="product-style__item">
-                            <button class="product-style__btn">
-                                <img class="product-style__icon"
-                                     src="../assets/images/icons/popover-size-img.png"
-                                     alt="straight-icon">
-
-                                <div class="product-style__checked"><span></span></div>
-                            </button>
-                            <div class="product-style__text">S</div>
-                        </div>
-
-                        <div class="product-style__item">
-                            <button class="product-style__btn">
-                                <img class="product-style__icon"
-                                     src="../assets/images/icons/popover-size-img.png"
-                                     alt="straight-icon">
-
-                                <div class="product-style__checked"><span></span></div>
-                            </button>
-                            <div class="product-style__text">S</div>
-                        </div>
-
-                        <div class="product-style__item">
-                            <button class="product-style__btn">
-                                <img class="product-style__icon"
-                                     src="../assets/images/icons/popover-size-img.png"
-                                     alt="straight-icon">
-                                <div class="product-style__checked"><span></span></div>
-                            </button>
-
-                            <div class="product-style__text">M</div>
-                        </div>
-
-                        <div class="product-style__item">
-                            <button class="product-style__btn">
-                                <img class="product-style__icon"
-                                     src="../assets/images/icons/popover-size-img.png"
-                                     alt="straight-icon">
-
-                                <div class="product-style__checked"><span></span></div>
-                            </button>
-                            <div class="product-style__text">S</div>
-                        </div>
-
-                        <div class="product-style__item">
-                            <button class="product-style__btn">
-                                <img class="product-style__icon"
-                                     src="../assets/images/icons/popover-size-img.png"
-                                     alt="straight-icon">
-
-                                <div class="product-style__checked"><span></span></div>
-                            </button>
-                            <div class="product-style__text">S</div>
+                            <div class="product-style__text">{{ size.text.toUpperCase() }}</div>
                         </div>
 
                     </div>
                 </slot>
 
                 <div class="btn-group">
-                    <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark ">Выбрать
+                    <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark " @click.prevent>Выбрать
                         размер <span>M</span></a>
                 </div>
             </div>
@@ -122,9 +68,9 @@
                 Примеры размеров
             </a>
 
-            <span class="column-link__icon icon-eye" >
+            <span class="column-link__icon icon-eye">
 
-                <img src="../assets/images/icons/eye.svg" alt="icon-eye">
+                <img src="../img/icons/eye.svg" alt="icon-eye">
             </span>
         </div>
 
@@ -143,17 +89,32 @@
         },
         data() {
             return {
-                openedPopper: null
+                openedPopper: null,
+                dressStyles: {
+                    types: [
+                        {src: 'popover-size-img', text: 'm'},
+                        {src: 'popover-size-img', text: 'l'},
+                        {src: 'popover-size-img', text: 'xl'},
+                        {src: 'popover-size-img', text: 's'},
+                        {src: 'popover-size-img', text: 'xs'},
+                        {src: 'popover-size-img', text: 'xxl'},
+                    ],
+                    currentType: ''
+                }
             }
         },
         methods: {
             close() {
-                if(this.openedPopper) {
+                if (this.openedPopper) {
                     this.openedPopper.doClose();
                 }
             },
             show(event) {
                 this.openedPopper = event;
+            },
+            getImgUrl(pet) {
+                var images = require.context('../img/', false, /\.png/);
+                return images('./' + pet + ".png")
             }
         }
     }

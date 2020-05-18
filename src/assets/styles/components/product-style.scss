@@ -3,8 +3,7 @@
 
   &_patterns {
 
-
-    .product-style__items {
+    .product-style__item {
        margin-bottom: 12px;
 
       &:last-child {
@@ -42,7 +41,7 @@
     height: 60px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
-    border: none;
+    border: 2px solid transparent;
     cursor: pointer;
     padding-top: 4px;
     position: relative;
@@ -84,7 +83,7 @@
         width: 20px;
         height: 20px;
         display: inline-block;
-        background: url("assets/images/icons/eye.svg") no-repeat;
+        background: url("./img/icons/eye.svg") no-repeat;
         position: absolute;
         top: -18px;
         left: 12px;
@@ -113,7 +112,7 @@
       border: 2px solid #000000;
       border-radius: 50%;
       position: absolute;
-      margin-top: 27px;
+      bottom: -41px;
       margin-left: -7px;
 
       &::before {
