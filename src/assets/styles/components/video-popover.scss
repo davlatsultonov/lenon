@@ -21,9 +21,17 @@
     width: 100%;
     height: 200px;
     background-color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     opacity: 0.4;
+    transition: opacity 0.3s ease-in;
     position: absolute;
     top: 0;
+
+    &:hover{
+      opacity: 0.2;
+    }
   }
 
   .video-items {

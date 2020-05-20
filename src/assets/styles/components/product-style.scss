@@ -1,7 +1,7 @@
 .product-style {
-  max-height: 372px;
 
   &_patterns {
+    height: 133px;
 
     .product-style__item {
        margin-bottom: 12px;
@@ -69,7 +69,7 @@
   &__link {
     text-align: center;
     box-shadow: none;
-    margin-top: -9px;
+    margin-top: -20px;
 
     > a {
       display: inline-block;

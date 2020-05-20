@@ -9,9 +9,9 @@
                         offset: ['10px', '80px'],
                       }
                   }
-                }" class="popover">
+                }" class="popover" @hide="hide">
 
-        <div class="popper">
+        <div class="popper" ref="popper-js">
 
             <div class="popover__header">
                 <div class="option-block__title">
@@ -44,7 +44,8 @@
         </div>
 
         <span class="btn-group__item_preview" slot="reference" >
-            <img src="../img/icons/eye.svg" alt="icon-eye">
+            <img src="../img/icons/eye.svg" alt="icon-eye" v-if="!this.activePopper">
+            <img src="../img/icons/active-eye-icon.svg" alt="icon-eye" v-else="this.activePopper">
         </span>
     </popper>
 </template>
@@ -52,6 +53,7 @@
 <script>
     import VueSlickCarousel from 'vue-slick-carousel';
     import Popper from 'vue-popperjs';
+
 
     export default {
         name: "Popover",
@@ -61,17 +63,23 @@
         },
         data() {
             return {
-                openedPopper: null
+                openedPopper: null,
+                activePopper: false
             }
         },
         methods: {
             close() {
                 if(this.openedPopper) {
                     this.openedPopper.doClose();
+                    this.activePopper = false;
                 }
             },
             show(event) {
                 this.openedPopper = event;
+                this.activePopper = true;
+            },
+            hide() {
+                this.activePopper = false;
             }
         }
 

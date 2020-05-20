@@ -55,7 +55,8 @@
 
                                     <div class="product-style__item"
                                          v-for="(fashion, index) in styles.dressFachion.types" :key="fashion + index">
-                                        <button class="product-style__btn" :class="{ active: fashion === styles.dressFachion.currentType }"
+                                        <button class="product-style__btn"
+                                                :class="{ active: fashion === styles.dressFachion.currentType }"
                                                 @click="styles.dressFachion.currentType = fashion">
                                             <img class="product-style__icon" :src="getImgUrl(fashion.src)"
                                                  alt="straight-icon">
@@ -95,12 +96,13 @@
 
                             <div class="btn-group padding-top-7">
 
-                                <div class="btn-group__item btn-group__item_sm"
-                                     v-for="(print, index) in printType.types" :key="index">
-                                    <button type="button" :class="{ active:  print === printType.currentType }"
-                                            @click="printType.currentType = print">
+                                <div class="btn-group__item"
+                                     v-for="(print, index) in printType.types" :key="index"
+                                     :class="{ active:  print === printType.currentType }">
+                                    <span @click="printType.currentType = print"
+                                          class="btn-group__item-text btn-group__item-text_sm">
                                         {{ print }}
-                                    </button>
+                                    </span>
                                 </div>
 
                             </div>
@@ -109,20 +111,21 @@
                             <div class="product-style  product-style_patterns">
 
 
-                                    <div class="product-style__item" v-for="(pattern, index) in styles.patterns.type"
-                                         :key="pattern + index">
-                                        <button class="product-style__btn" :class="{ active: pattern === styles.patterns.currentType }"
-                                                @click="styles.patterns.currentType = pattern">
-                                                <img class="product-style__icon" :src="getImgUrl(pattern)"
-                                                 >
-                                        </button>
-                                    </div>
+                                <div class="product-style__item" v-for="(pattern, index) in styles.patterns.type"
+                                     :key="pattern + index">
+                                    <button class="product-style__btn"
+                                            :class="{ active: pattern === styles.patterns.currentType }"
+                                            @click="styles.patterns.currentType = pattern">
+                                        <img class="product-style__icon" :src="getImgUrl(pattern)"
+                                        >
+                                    </button>
+                                </div>
 
-                                    <div class="product-style__item">
-                                        <div class="product-style__btn product-style__link">
-                                            <a href="#" @click.prevent>еще <span>+10</span></a>
-                                        </div>
+                                <div class="product-style__item">
+                                    <div class="product-style__btn product-style__link">
+                                        <a href="#" @click.prevent>еще <span>+10</span></a>
                                     </div>
+                                </div>
 
 
                             </div>
@@ -166,12 +169,12 @@
 
                             <div class="btn-group">
 
-                                <div class="btn-group__item btn-group__item_sm" v-for="(type, index) in sizeType.types"
-                                     :key="type + index">
-                                    <button type="button" :class="{ active:  type === sizeType.currentType }"
-                                            @click="sizeType.currentType = type">
+                                <div class="btn-group__item" v-for="(type, index) in sizeType.types"
+                                     :key="type + index" :class="{ active:  type === sizeType.currentType }">
+                                    <span @click="sizeType.currentType = type"
+                                          class="btn-group__item-text btn-group__item-text_sm">
                                         {{ type }}
-                                    </button>
+                                    </span>
                                 </div>
 
                             </div>
@@ -181,18 +184,18 @@
 
                                 <info-popover></info-popover>
 
-                                <size-popover></size-popover>
+                                <size-popover :sizes="euroSize.text" @selectSize="euroSize.currentSize = $event"></size-popover>
 
                             </div>
 
                             <div class="btn-group">
 
-                                <div class="btn-group__item btn-group__item_xs" v-for="(size, index) in euroSize.size"
+                                <div class="btn-group__item btn-group__item_xs" v-for="(size, index) in euroSize.text"
+                                     :class="{ active:  size === euroSize.currentSize }"
                                      :key="size + index">
-                                    <button type="button" :class="{ active:  size === euroSize.currentSize }"
-                                            @click="euroSize.currentSize = size">
-                                        {{ size }}
-                                    </button>
+                                    <span class="btn-group__item-text" @click="euroSize.currentSize = size">
+                                        {{ size.toUpperCase() }}
+                                    </span>
                                 </div>
 
                             </div>
@@ -204,12 +207,12 @@
                             </div>
 
                             <div class="btn-group">
-                                <div class="btn-group__item btn-group__item_xs" v-for="(h, index) in bodyHeight.height"
+                                <div class="btn-group__item" v-for="(type, index) in bodyHeight.types"
+                                     :class="{ active: type === bodyHeight.currentHeigt, disabled: type.isDisabled }"
                                      :key="index">
-                                    <button type="button" :class="{ active: h === bodyHeight.currentHeigt }"
-                                            @click="bodyHeight.currentHeigt = h">
-                                        {{ h }}
-                                    </button>
+                                    <span class="btn-group__item-text" @click="bodyHeight.currentHeigt = type">
+                                        {{ type.h }}
+                                    </span>
                                 </div>
                             </div>
 
@@ -333,125 +336,67 @@
                                     Пуговки
                                 </div>
 
-                                <div class="btn-group__item" v-for="(dressButton, index) in dressButtons.types"
+                                <div class="btn-group__item" v-for="(dressButton, index) in dressButtons.types" :class="{ active: dressButton === dressButtons.currentType, disabled: dressButtons.isDisabled}"
                                      :key="dressButton.text + index">
-                                    <button type="button" :class="{ active: dressButton === dressButtons.currentType}"
-                                            @click="dressButtons.currentType = dressButton"
-                                            :disabled="dressButton.isDisabled">
+                                    <span class="btn-group__item-text" @click="dressButtons.currentType = dressButton">
                                         {{ dressButton.text }}
-
-                                        <popover>
-                                            <template v-if="dressButton.hasPopover">
-                                                <div class="product-slider__img"><img
-                                                        src="./img/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img
-                                                        src="./img/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
-
-                                    </button>
+                                    </span>
+                                    <popover>
+                                        <template v-if="dressButton.hasPopover">
+                                            <div class="product-slider__img"><img
+                                                    src="./img/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img
+                                                    src="./img/upper-part.png"/>
+                                            </div>
+                                        </template>
+                                    </popover>
                                     <info-popover v-if="dressButton.hasInfo"></info-popover>
                                 </div>
-
-
-                                <!--<div class="btn-group__item">
-                                    <button type="button">
-                                        На груди
-                                        <popover></popover>
-                                    </button>
-                                </div>
-
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        На спине
-                                        <popover></popover>
-                                    </button>
-                                </div>
-
-                                <br>
-
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        3/4
-                                        <popover></popover>
-                                    </button>
-                                </div>
-
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        До талии
-                                        <popover></popover>
-                                    </button>
-                                </div>
-
-                                <div class="btn-group__item">
-                                    <button type="button" class="disabled">
-                                        Всю длину
-                                        <popover></popover>
-                                    </button>
-                                    <info-popover></info-popover>
-                                </div>-->
 
                                 <div class="option-block__title option-block__title_sm">
                                     Воротник
                                 </div>
 
-
-                                <div class="btn-group__item" v-for="(collarItem, index) in collar.types"
+                                <div class="btn-group__item" v-for="(collarItem, index) in collar.types" :class="{ active: collarItem === collar.currentType, disabled: collarItem.isDisabled}"
                                      :key="collarItem.text + index">
-                                    <button type="button" :class="{ active: collarItem === collar.currentType}"
-                                            @click="collar.currentType = collarItem" :disabled="collarItem.isDisabled">
+                                    <span @click="collar.currentType = collarItem"  class="btn-group__item-text">
                                         {{ collarItem.text }}
+                                    </span>
 
-                                        <popover>
-                                            <template v-if="collarItem.hasPopover">
-                                                <div class="product-slider__img"><img
-                                                        src="./img/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img
-                                                        src="./img/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
+                                    <popover>
+                                        <template v-if="collarItem.hasPopover">
+                                            <div class="product-slider__img"><img
+                                                    src="./img/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img
+                                                    src="./img/upper-part.png"/>
+                                            </div>
+                                        </template>
+                                    </popover>
 
-                                    </button>
                                     <info-popover v-if="collarItem.hasInfo"></info-popover>
                                 </div>
-                                <!--<div class="btn-group__item">
-                                    <button type="button">
-                                        Стойка
-                                        <popover></popover>
-                                    </button>
-                                </div>
-                                <div class="btn-group__item">
-                                    <button type="button">
-                                        Английский
-                                        <popover></popover>
-                                    </button>
-                                </div>-->
 
 
                                 <div class="option-block__title option-block__title_sm">
                                     Рукава
                                 </div>
 
-                                <div class="btn-group__item" v-for="(sleeve, index) in sleeves.types"
+                                <div class="btn-group__item" v-for="(sleeve, index) in sleeves.types" :class="{ active: sleeve === sleeves.currentType, disabled: sleeve.isDisabled}"
                                      :key="sleeve.text + index">
-                                    <button type="button" :class="{ active: sleeve === sleeves.currentType}"
-                                            @click="sleeves.currentType = sleeve" :disabled="sleeve.isDisabled">
+                                    <span @click="sleeves.currentType = sleeve"  class="btn-group__item-text">
                                         {{ sleeve.text }}
+                                    </span>
 
-                                        <popover>
-                                            <template v-if="sleeve.hasPopover">
-                                                <div class="product-slider__img"><img
-                                                        src="./img/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img
-                                                        src="./img/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
+                                    <popover>
+                                        <template v-if="sleeve.hasPopover">
+                                            <div class="product-slider__img"><img
+                                                    src="./img/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img
+                                                    src="./img/upper-part.png"/>
+                                            </div>
+                                        </template>
+                                    </popover>
 
-                                    </button>
                                     <info-popover v-if="sleeve.hasInfo"></info-popover>
                                 </div>
 
@@ -459,23 +404,22 @@
                                     Завязки (пояс)
                                 </div>
 
-                                <div class="btn-group__item" v-for="(belt, index) in belts.types"
+                                <div class="btn-group__item" v-for="(belt, index) in belts.types" :class="{ active: belt === belts.currentType, disabled: belt.isDisabled}"
                                      :key="belt.text + index + index">
-                                    <button type="button" :class="{ active: belt === belts.currentType}"
-                                            @click="belts.currentType = belt" :disabled="belt.isDisabled">
+                                    <span @click="belts.currentType = belt" class="btn-group__item-text">
                                         {{ belt.text }}
+                                    </span>
 
-                                        <popover>
-                                            <template v-if="belt.hasPopover">
-                                                <div class="product-slider__img"><img
-                                                        src="./img/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img
-                                                        src="./img/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
+                                    <popover>
+                                        <template v-if="belt.hasPopover">
+                                            <div class="product-slider__img"><img
+                                                    src="./img/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img
+                                                    src="./img/upper-part.png"/>
+                                            </div>
+                                        </template>
+                                    </popover>
 
-                                    </button>
                                     <info-popover v-if="belt.hasInfo"></info-popover>
                                 </div>
 
@@ -484,23 +428,22 @@
                                     Карманы
                                 </div>
 
-                                <div class="btn-group__item" v-for="(pocket, index) in pockets.types"
+                                <div class="btn-group__item" v-for="(pocket, index) in pockets.types" :class="{ active: pocket === pockets.currentType, disabled: pocket.isDisabled}"
                                      :key="pocket.text + index">
-                                    <button type="button" :class="{ active: pocket === pockets.currentType}"
-                                            @click="pockets.currentType = pocket" :disabled="pocket.isDisabled">
+                                    <span @click="pockets.currentType = pocket" class="btn-group__item-text">
                                         {{ pocket.text }}
+                                    </span>
 
-                                        <popover>
-                                            <template v-if="pocket.hasPopover">
-                                                <div class="product-slider__img"><img
-                                                        src="./img/popover-img.png"/></div>
-                                                <div class="product-slider__img"><img
-                                                        src="./img/upper-part.png"/>
-                                                </div>
-                                            </template>
-                                        </popover>
+                                    <popover>
+                                        <template v-if="pocket.hasPopover">
+                                            <div class="product-slider__img"><img
+                                                    src="./img/popover-img.png"/></div>
+                                            <div class="product-slider__img"><img
+                                                    src="./img/upper-part.png"/>
+                                            </div>
+                                        </template>
+                                    </popover>
 
-                                    </button>
                                     <info-popover v-if="pocket.hasInfo"></info-popover>
                                 </div>
 
@@ -521,20 +464,23 @@
 
                         <div class="btn-group">
 
-                            <div class="btn-group__item" v-for="(supplement, index) in supplements" :key="index">
-                                <button type="button" :class="{ active: supplement.checked }"
-                                        @click="supplement.checked = !supplement.checked">
-                                    {{ supplement.text }}
+                            <div class="btn-group__item" v-for="(supplement, index) in supplements" :key="index"
+                                 :class="{ active: supplement.checked }"
 
-                                    <popover>
-                                        <template v-if="supplement.hasPopover">
-                                            <div class="product-slider__img"><img
-                                                    src="./img/popover-img.png"/></div>
-                                            <div class="product-slider__img"><img src="./img/upper-part.png"/>
-                                            </div>
-                                        </template>
-                                    </popover>
-                                </button>
+                            >
+                                <span href="#" type="button" class="btn-group__item-text"
+                                      @click="supplement.checked = !supplement.checked">
+                                    {{ supplement.text }}
+                                </span>
+
+                                <popover>
+                                    <template v-if="supplement.hasPopover">
+                                        <div class="product-slider__img"><img
+                                                src="./img/popover-img.png"/></div>
+                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
+                                        </div>
+                                    </template>
+                                </popover>
                             </div>
 
                             <!--<div class="btn-group__item">
@@ -877,11 +823,17 @@
                     currentType: ''
                 },
                 euroSize: {
-                    size: ['xs', 's', 'm', 'l', 'xl'],
+                    text: ['xs', 's', 'm', 'l', 'xl'],
                     currentSize: ''
                 },
                 bodyHeight: {
-                    height: [150, 160, 170, 180, 190],
+                    types: [
+                        {h: 150, isDisabled: false},
+                        {h: 160, isDisabled: false},
+                        {h: 170, isDisabled: false},
+                        {h: 180, isDisabled: true},
+                        {h: 190, isDisabled: true}
+                    ],
                     currentHeigt: 0,
                 },
                 colorsPalette: {
@@ -961,6 +913,15 @@
                 var images = require.context('./img/', false, /\.svg/);
                 return images('./' + pet + ".svg")
             }
+        },
+        mounted() {
+            let parents = document.querySelectorAll('.btn-group__item');
+            
+            [...parents].forEach(el => {
+                if (el.querySelector(".info-popover") != null) {
+                    el.style.marginRight = '24px';
+                }
+            });
         }
     }
 

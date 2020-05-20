@@ -40,23 +40,23 @@
                 <slot name="popover__content_right">
                     <div class="product-style ">
 
-                        <div class="product-style__item" v-for="(size, index) in dressStyles.types"
+                        <div class="product-style__item" v-for="(size, index) in dressStyles.text"
                              :key="size + index">
                             <button class="product-style__btn" :class="{ active: size === dressStyles.currentType }"
                                     @click="dressStyles.currentType = size">
-                                <img class="product-style__icon" :src="getImgUrl(size.src)"
+                                <img class="product-style__icon" :src="getImgUrl(dressStyles.src[index])"
                                      >
                                 <div class="product-style__checked"><span></span></div>
                             </button>
 
-                            <div class="product-style__text">{{ size.text.toUpperCase() }}</div>
+                            <div class="product-style__text">{{ size.toUpperCase() }}</div>
                         </div>
 
                     </div>
                 </slot>
 
                 <div class="btn-group">
-                    <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark " @click.prevent>Выбрать
+                    <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark " @click.prevent="selectSize">Выбрать
                         размер <span>M</span></a>
                 </div>
             </div>
@@ -87,18 +87,15 @@
             VueSlickCarousel,
             'popper': Popper
         },
+        props: {
+            sizes: Array
+        },
         data() {
             return {
                 openedPopper: null,
                 dressStyles: {
-                    types: [
-                        {src: 'popover-size-img', text: 'm'},
-                        {src: 'popover-size-img', text: 'l'},
-                        {src: 'popover-size-img', text: 'xl'},
-                        {src: 'popover-size-img', text: 's'},
-                        {src: 'popover-size-img', text: 'xs'},
-                        {src: 'popover-size-img', text: 'xxl'},
-                    ],
+                    src: ['popover-size-img','popover-size-img','popover-size-img','popover-size-img','popover-size-img','popover-size-img'],
+                    text: this.sizes,
                     currentType: ''
                 }
             }
@@ -111,6 +108,14 @@
             },
             show(event) {
                 this.openedPopper = event;
+            },
+            selectSize() {
+                this.$emit('selectSize', this.dressStyles.currentType);
+
+                if (this.openedPopper) {
+                    this.openedPopper.doClose();
+                    this.dressStyles.currentType = '';
+                }
             },
             getImgUrl(pet) {
                 var images = require.context('../img/', false, /\.png/);
