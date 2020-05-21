@@ -831,8 +831,8 @@
                         {h: 150, isDisabled: false},
                         {h: 160, isDisabled: false},
                         {h: 170, isDisabled: false},
-                        {h: 180, isDisabled: true},
-                        {h: 190, isDisabled: true}
+                        {h: 180, isDisabled: false},
+                        {h: 190, isDisabled: false}
                     ],
                     currentHeigt: 0,
                 },

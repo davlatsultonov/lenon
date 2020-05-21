@@ -57,7 +57,7 @@
 
                 <div class="btn-group">
                     <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark " @click.prevent="selectSize">Выбрать
-                        размер <span>M</span></a>
+                        размер <span>{{ dressStyles.currentType.toUpperCase() }}</span></a>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                 dressStyles: {
                     src: ['popover-size-img','popover-size-img','popover-size-img','popover-size-img','popover-size-img','popover-size-img'],
                     text: this.sizes,
-                    currentType: ''
+                    currentType: 'xs'
                 }
             }
         },
@@ -114,7 +114,6 @@
 
                 if (this.openedPopper) {
                     this.openedPopper.doClose();
-                    this.dressStyles.currentType = '';
                 }
             },
             getImgUrl(pet) {
