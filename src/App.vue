@@ -465,10 +465,8 @@
                         <div class="btn-group">
 
                             <div class="btn-group__item" v-for="(supplement, index) in supplements" :key="index"
-                                 :class="{ active: supplement.checked }"
-
-                            >
-                                <span href="#" type="button" class="btn-group__item-text"
+                                 :class="{ active: supplement.checked }">
+                                <span type="button" class="btn-group__item-text"
                                       @click="supplement.checked = !supplement.checked">
                                     {{ supplement.text }}
                                 </span>
@@ -482,80 +480,6 @@
                                     </template>
                                 </popover>
                             </div>
-
-                            <!--<div class="btn-group__item">
-                                <button type="button">
-                                    Поясок
-                                    <popover>
-
-                                        <div class="product-slider__img"><img
-                                                src="./img/popover-img.png"/></div>
-                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
-                                        </div>
-
-                                    </popover>
-                                </button>
-                            </div>
-
-
-                            <div class="btn-group__item">
-                                <button type="button">
-                                    Молния для кормления
-                                    <popover></popover>
-                                </button>
-                            </div>
-
-                            <div class="btn-group__item">
-                                <button type="button">
-                                    Шопер
-                                    <popover>
-                                        <div class="product-slider__img"><img
-                                                src="./img/popover-img.png"/></div>
-                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
-                                        </div>
-                                    </popover>
-                                </button>
-                            </div>
-
-
-                            <div class="btn-group__item">
-                                <button type="button">
-                                    Кармашек с вышивкой
-                                    <popover></popover>
-                                </button>
-                            </div>
-
-                            <div class="btn-group__item">
-                                <button type="button">
-                                    Кардиган
-                                    <popover>
-                                        <div class="product-slider__img"><img
-                                                src="./img/popover-img.png"/></div>
-                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
-                                        </div>
-                                    </popover>
-                                </button>
-                            </div>
-
-
-                            <div class="btn-group__item">
-                                <button type="button">
-                                    Резинки для волос
-                                    <popover></popover>
-                                </button>
-                            </div>
-
-                            <div class="btn-group__item">
-                                <button type="button">
-                                    Нижняя юбка
-                                    <popover>
-                                        <div class="product-slider__img"><img
-                                                src="./img/popover-img.png"/></div>
-                                        <div class="product-slider__img"><img src="./img/upper-part.png"/>
-                                        </div>
-                                    </popover>
-                                </button>
-                            </div>-->
 
 
                         </div>
