@@ -12,10 +12,17 @@
     cursor: pointer;
     text-align: center;
     position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    margin-bottom: 12px;
 
     &:not(:last-child) {
       margin-right: 10px;
-      margin-bottom: 12px;
+    }
+
+    &.smart-margin {
+      margin-bottom: 0;
     }
 
     &.disabled{

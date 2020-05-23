@@ -1,7 +1,7 @@
 <template>
     <popper trigger="clickToToggle"
             @show="show"
-            :options="{ placement: 'top' }" class="popover size-popover">
+            :options="{ placement: 'top' }" class="popover size-popover"  @hide="hide">
 
         <div class="popper">
 
@@ -69,8 +69,8 @@
             </a>
 
             <span class="column-link__icon icon-eye">
-
-                <img src="../img/icons/eye.svg" alt="icon-eye">
+                <img src="../img/icons/eye.svg" alt="icon-eye" v-if="!this.activePopper">
+                <img src="../img/icons/active-eye-icon.svg" alt="icon-eye" v-else="this.activePopper">
             </span>
         </div>
 
@@ -93,6 +93,7 @@
         data() {
             return {
                 openedPopper: null,
+                activePopper: false,
                 dressStyles: {
                     src: ['popover-size-img','popover-size-img','popover-size-img','popover-size-img','popover-size-img','popover-size-img'],
                     text: this.sizes,
@@ -104,10 +105,15 @@
             close() {
                 if (this.openedPopper) {
                     this.openedPopper.doClose();
+                    this.activePopper = false;
                 }
             },
             show(event) {
                 this.openedPopper = event;
+                this.activePopper = true;
+            },
+            hide() {
+                this.activePopper = false;
             },
             selectSize() {
                 this.$emit('selectSize', this.dressStyles.currentType);

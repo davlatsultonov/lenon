@@ -428,7 +428,7 @@
                                     Карманы
                                 </div>
 
-                                <div class="btn-group__item" v-for="(pocket, index) in pockets.types" :class="{ active: pocket === pockets.currentType, disabled: pocket.isDisabled}"
+                                <div class="btn-group__item smart-margin" v-for="(pocket, index) in pockets.types" :class="{ active: pocket === pockets.currentType, disabled: pocket.isDisabled}"
                                      :key="pocket.text + index">
                                     <span @click="pockets.currentType = pocket" class="btn-group__item-text">
                                         {{ pocket.text }}
