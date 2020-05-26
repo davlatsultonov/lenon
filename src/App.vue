@@ -532,7 +532,7 @@
                                             <li class="result-list__item">Прямое</li>
                                             <li class="result-list__item">
                                                 Графитовый
-                                                <span class="result-list__item_color"></span>
+                                                <span class="result-list__item_color" style="background-color: #353228"></span>
                                             </li>
                                             <li class="result-list__item">Горчичный</li>
                                             <li class="result-list__item">Без принта</li>
@@ -613,44 +613,26 @@
 
                                 <div class="selection-result_wrapper">
 
-                                    <div class="selection-result__column">
-                                        <ul class="result-list">
-                                            <li class="result-list__item">Пуговки</li>
-                                            <li class="result-list__item">Рукава</li>
-                                            <li class="result-list__item">Карманы</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="selection-result__column">
-                                        <ul class="result-list">
-                                            <li class="result-list__item">300 руб.</li>
-                                            <li class="result-list__item">300 руб.</li>
-                                            <li class="result-list__item">300 руб.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="selection-result__column">
-                                        <ul class="result-list">
-                                            <li class="result-list__item">На груди, 3/4</li>
-                                            <li class="result-list__item">Да, 3/4</li>
-                                            <li class="result-list__item">Да</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="selection-result__column">
-                                        <ul class="result-list">
-                                            <li class="result-list__item result-list__item_remove">
-                                                Убрать
-                                            </li>
-                                            <li class="result-list__item result-list__item_remove">
-                                                Убрать
-                                            </li>
-                                            <li class="result-list__item result-list__item_remove">
-                                                Убрать
-                                            </li>
-                                        </ul>
-                                    </div>
-
+                                    <table class="extra-selection">
+                                        <tr class="extra-selection__item">
+                                            <td>Пуговки</td>
+                                            <td>300 руб.</td>
+                                            <td>На груди, 3/4</td>
+                                            <td class="extra-selection__btn">Убрать</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Рукава</td>
+                                            <td>300 руб.</td>
+                                            <td>Да, 3/4</td>
+                                            <td class="extra-selection__btn">Убрать</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Карманы</td>
+                                            <td>300 руб.</td>
+                                            <td>Да</td>
+                                            <td class="extra-selection__btn">Убрать</td>
+                                        </tr>
+                                    </table>
 
                                 </div>
 

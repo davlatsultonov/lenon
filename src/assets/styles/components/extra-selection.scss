@@ -1,0 +1,29 @@
+.extra-selection {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  font-size: 14px;
+
+  &__item {
+
+    td {
+      padding-right: 25px;
+
+      &:nth-child(3) {
+        padding-right: 18px;
+      }
+    }
+  }
+
+  &__btn {
+    color: #a4a4a4;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-style: italic;
+    transition: $btn-transition;
+
+    &:hover {
+      color: #757373;
+    }
+  }
+}
