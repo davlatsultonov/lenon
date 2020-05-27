@@ -44,9 +44,8 @@
                              :key="size + index">
                             <button class="product-style__btn" :class="{ active: size === dressStyles.currentType }"
                                     @click="dressStyles.currentType = size">
-                                <img class="product-style__icon" :src="getImgUrl(dressStyles.src[index])"
-                                     >
-                                <div class="product-style__checked"><span></span></div>
+                                <img class="product-style__icon" :src="getImgUrl(dressStyles.src[index])">
+                                <span class="product-style__dot"></span>
                             </button>
 
                             <div class="product-style__text">{{ size.toUpperCase() }}</div>
