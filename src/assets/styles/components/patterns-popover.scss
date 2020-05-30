@@ -2,8 +2,17 @@
   text-align: left;
 
   .popper {
-    padding: 50px 28px 30px;
+    padding: 50px 28px 20px;
     text-align: left;
-    min-width: 266px;
+    width: 416px;
+    top: 2px !important;
+    left: -2px !important;
+  }
+
+  .product-style {
+
+    &_patterns {
+      height: auto;
+    }
   }
 }

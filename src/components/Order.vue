@@ -166,7 +166,9 @@
 
                         <div class="btn-group footer__btn-group">
 
-                            <a href="#" class="btn-group__item btn-group__item_result">
+                            <a href="#" class="btn-group__item btn-group__item_result"
+                               @click.prevent="$emit('change-page', 'main')"
+                            >
                                 Вернуться назад
                             </a>
 

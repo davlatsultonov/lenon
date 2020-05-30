@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <div style="display: none;">
+        <div v-if="currentPage === 'main'">
 
             <header class="header">
                 <div class="logo">
@@ -98,20 +98,32 @@
                                 <div class="btn-group padding-top-7">
 
                                     <div class="btn-group__item"
-                                         v-for="(printItem, index) in printType.items" :key="index"
-                                         :class="{ active:  printItem.text === printType.currentType }">
+                                         v-for="(item, index) in printType.types" :key="index"
+                                         :class="{ active:  item === printType.currentType }">
 
                                     <span class="btn-group__item-text btn-group__item-text_sm"
-                                          @click="printType.currentType = printItem.text"
-                                    > {{ printItem.text }} </span>
+                                          @click="printType.currentType = item"
+                                    > {{ item }} </span>
 
-                                        <div v-if="printItem.patterns != null">
-                                            <patterns-popover :patterns="printItem.patterns"></patterns-popover>
-                                        </div>
                                     </div>
 
                                 </div>
 
+                                <div class="product-style  product-style_patterns">
+                                    <div class="product-style__item" v-for="(pattern, index) in styles.patterns.type"
+                                         :key="pattern + index">
+                                        <button class="product-style__btn"
+                                                :class="{ active: pattern === styles.patterns.currentType }"
+                                                @click="styles.patterns.currentType = pattern">
+                                            <img class="product-style__icon" :src="getImgUrl(pattern)">
+                                        </button>
+                                    </div>
+
+                                    <div class="product-style__item" style="position:relative;">
+                                        <patterns-popover :patterns="styles.patterns"></patterns-popover>
+                                    </div>
+
+                                </div>
                             </div>
 
 
@@ -681,7 +693,9 @@
                                     Отправить на e-mail
                                 </a>
 
-                                <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark">
+                                <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark"
+                                   @click.prevent="currentPage = 'order'"
+                                >
                                     Добавить в корзину
                                 </a>
 
@@ -697,8 +711,8 @@
 
         </div>
 
-        <div>
-            <order></order>
+        <div v-if="currentPage === 'order'">
+            <order @change-page="currentPage = $event"></order>
         </div>
     </div>
 
@@ -727,6 +741,7 @@
         },
         data() {
             return {
+                currentPage: 'main',
                 measures: {
                     waist: '',
                     shoulder: '',
@@ -736,26 +751,7 @@
                     "hand-girth": '',
                 },
                 printType: {
-                    items: [
-                        {
-                            text: 'Без принта',
-                            patterns: null
-                        },
-                        {
-                            text: 'До пояса',
-                            patterns: {
-                                type: ['birds', 'deer', 'fox', 'horse', 'leaves', 'leaves-2', 'pattern', 'ship', 'whales'],
-                                currentType: ''
-                            }
-                        },
-                        {
-                            text: 'Полностью',
-                            patterns: {
-                                type: ['birds', 'deer', 'fox'],
-                                currentType: ''
-                            }
-                        }
-                     ],
+                    types: ['Без принта', 'До пояса', 'Полностью'],
                     currentType: ''
                 },
                 sizeType: {
@@ -790,11 +786,11 @@
                             {src: 'cutting', text: 'Отрезное'},
                         ],
                         currentType: ''
-                    }/*,
+                    },
                     patterns: {
                         type: ['birds', 'deer', 'fox', 'horse', 'leaves', 'leaves-2', 'pattern', 'ship', 'whales'],
                         currentType: ''
-                    }*/
+                    }
                 },
                 supplements: [
                     {text: 'Декоративный кармашек', hasPopover: false, checked: false},

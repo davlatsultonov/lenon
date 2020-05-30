@@ -41,10 +41,10 @@
 
         </div>
 
-        <span class="btn-group__item_preview" slot="reference" >
-            <img src="../img/icons/eye.svg" alt="icon-eye" v-if="!this.activePopper">
-            <img src="../img/icons/active-eye-icon.svg" alt="icon-eye" v-else="this.activePopper">
-        </span>
+        <div class="product-style__btn product-style__link" slot="reference" >
+            <a href="#" @click.prevent>еще <span>+10</span></a>
+        </div>
+
     </popper>
 </template>
 
@@ -58,12 +58,7 @@
             'popper': Popper
         },
         props: {
-            patterns: {
-                type: Object,
-                validator: function (value) {
-                    return value !== null
-                }
-            }
+            patterns: Object
         },
         data() {
             return {
