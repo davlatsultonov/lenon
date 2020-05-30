@@ -698,9 +698,7 @@
         </div>
 
         <div>
-
             <order></order>
-
         </div>
     </div>
 

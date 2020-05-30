@@ -71,6 +71,57 @@
 
             </div>
 
+            <div class="container">
+
+                <h1 class="order__title">
+                    Как будем доставлять заказ?
+                </h1>
+
+                <form class="form-group">
+
+                    <div class="form-group__items-wrapper">
+                        <div class="form-group__item">
+                            <label class="form-group__radio">Самовывоз Адрес: Омск, ул. Ленина 14/1, 3 этаж, офис 312
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="form-group__radio">Доставка Почтой России
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="form-group__radio">Доставка СДЭК
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group__items-wrapper">
+                        <div class="form-group__item form-group__item_lg">
+                            <label class="form-group__label">Адрес доставки</label>
+
+                            <input type="text" class="form-group__input" placeholder="Начните вводить адрес">
+                        </div>
+                    </div>
+
+                    <div class="form-group__items-wrapper">
+                        <div class="form-group__item form-group__item_lg">
+                            <label class="form-group__label">Комментарий</label>
+
+                            <textarea class="form-group__comments" placeholder="Особые указания для доставки?"></textarea>
+
+                            <div class="form-group__text">
+                                Стоимость доставки наш менеджер сообщит сразу после подтверждения заказа
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+
         </div>
 
     </div>
