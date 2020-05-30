@@ -2,22 +2,13 @@
 
   &__item {
     width: 78px;
-    height: 28px;
-    font-weight: 500;
-    font-size: 12px;
+    height: 31px;
     text-align: center;
     border-radius: 3px;
     border: 1px solid #3f3f3f;
     background-color: #ffffff;
 
-    &:focus {
-      outline: none;
-    }
-
     &::placeholder {
-      color: #898989;
-      font-size: 12px;
-      font-style: italic;
       text-align: center;
     }
   }

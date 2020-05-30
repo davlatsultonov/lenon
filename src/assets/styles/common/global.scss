@@ -11,6 +11,21 @@ body {
   outline: none;
 }
 
+input {
+  font-size: 12px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #898989;
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+
 ul {
   list-style: none;
   padding: 0;

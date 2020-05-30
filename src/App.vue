@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <div style="display: none;">
+        <div >
 
             <header class="header">
                 <div class="logo">
