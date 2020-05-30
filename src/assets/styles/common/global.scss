@@ -3,6 +3,10 @@ body {
   background-color: #f7e9df;
 }
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 *:focus {
   outline: none;
 }

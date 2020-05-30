@@ -1,0 +1,40 @@
+.form-group {
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
+  &__label, &__input, &__text {
+    font-size: 12px;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    width: 160px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #3f3f3f;
+    line-height: 30px;
+    padding: 0 15px;
+
+
+    &::placeholder {
+      color: #898989;
+      font-size: 12px;
+      font-style: italic;
+    }
+  }
+
+  &__text {
+    margin-top: 13px;
+    font-style: italic;
+  }
+}
