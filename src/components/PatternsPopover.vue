@@ -1,6 +1,15 @@
 <template>
     <popper trigger="clickToToggle"
-            @show="show" class="popover  patterns-popover" @hide="hide">
+            @show="show"
+            :options="{
+                  placement: 'top',
+                  modifiers: {
+                        name: 'offset',
+                      options: {
+                        offset: ['10px', '80px'],
+                      }
+                  }
+                }" class="popover  patterns-popover" @hide="hide">
 
         <div class="popper" ref="popper-js">
             <div class="popover__header">
