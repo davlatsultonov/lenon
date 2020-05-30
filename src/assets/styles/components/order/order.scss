@@ -2,6 +2,14 @@
 
 .order {
 
+  .container {
+    padding-top: 15px;
+  }
+
+  &__title, &__text {
+    margin-top: 0;
+  }
+
   &__title {
     margin-bottom: 10px;
   }

@@ -1,9 +1,12 @@
 .form-group {
 
+  &__items-wrapper:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
   &__item {
     display: inline-block;
     vertical-align: middle;
-    margin-bottom: 15px;
     margin-right: 10px;
 
     &_lg {

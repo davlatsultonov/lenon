@@ -11,7 +11,7 @@
 
             <div class="container">
 
-                <h1 class="order__title">
+                <h1 class="order__title margin-top-15">
                     Персональные данные
                 </h1>
 
@@ -120,6 +120,66 @@
 
                 </form>
 
+            </div>
+
+            <div class="container">
+
+                <h1 class="order__title">
+                    Оплата сразу?
+                </h1>
+
+                <form class="form-group">
+                    <div class="form-group__items-wrapper">
+                        <div class="form-group__item">
+                            <label class="form-group__radio">Безналичным способом
+                                <input type="radio" checked="checked" name="radio-2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="form-group__radio">Оплата при получении (наличными или картой)
+                                <input type="radio" name="radio-2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="container">
+                <footer class="footer">
+
+                    <div class="footer__column">
+                        <div class="option-block">
+
+                            <div class="option-block__title option-block__title_lg footer__total-result">
+                                Итого: <span>5 000 руб.</span>
+                            </div>
+
+                            <div class="footer__note">
+                                Цена не включается в себя стоимость доставки
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="footer__column footer__column_md">
+
+                        <div class="btn-group footer__btn-group">
+
+                            <a href="#" class="btn-group__item btn-group__item_result">
+                                Вернуться назад
+                            </a>
+
+                            <a href="#" class="btn-group__item btn-group__item_result btn-group__item_result-dark">
+                                Подтвердить
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </footer>
             </div>
 
         </div>
