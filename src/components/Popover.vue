@@ -15,7 +15,7 @@
 
             <div class="popover__header">
                 <div class="option-block__title">
-                    Видео-инструкция
+                    <slot name="itemName"> </slot>
                 </div>
 
                 <div class="popover__close"  @click="close">

@@ -70,13 +70,14 @@
     }
 
     &_result {
+      height: 41px;
       width: 146px;
       background-color: #ffffff;
       color: #000;
       font-size: 12px;
       font-weight: 500;
       transition: background 0.175s ease-in;
-      padding: 12px 0;
+      margin-top: -3px;
       text-decoration: none;
 
       &:not(:last-child) {

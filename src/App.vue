@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <div >
+        <div style="display: none;">
 
             <header class="header">
                 <div class="logo">
@@ -324,6 +324,10 @@
                                         {{ dressButton.text }}
                                     </span>
                                         <popover>
+                                            <template #itemName>
+                                                {{ dressButton.text }}
+                                            </template>
+
                                             <template v-if="dressButton.hasPopover">
                                                 <div class="product-slider__img"><img
                                                         src="./img/popover-img.png"/></div>
@@ -346,6 +350,10 @@
                                     </span>
 
                                         <popover>
+                                            <template #itemName>
+                                                {{ collarItem.text }}
+                                            </template>
+
                                             <template v-if="collarItem.hasPopover">
                                                 <div class="product-slider__img"><img
                                                         src="./img/popover-img.png"/></div>
@@ -370,6 +378,10 @@
                                     </span>
 
                                         <popover>
+                                            <template #itemName>
+                                                {{ sleeve.text }}
+                                            </template>
+
                                             <template v-if="sleeve.hasPopover">
                                                 <div class="product-slider__img"><img
                                                         src="./img/popover-img.png"/></div>
@@ -393,6 +405,10 @@
                                     </span>
 
                                         <popover>
+                                            <template #itemName>
+                                                {{ belt.text }}
+                                            </template>
+
                                             <template v-if="belt.hasPopover">
                                                 <div class="product-slider__img"><img
                                                         src="./img/popover-img.png"/></div>
@@ -417,6 +433,10 @@
                                     </span>
 
                                         <popover>
+                                            <template #itemName>
+                                                {{ pocket.text }}
+                                            </template>
+
                                             <template v-if="pocket.hasPopover">
                                                 <div class="product-slider__img"><img
                                                         src="./img/popover-img.png"/></div>
@@ -454,6 +474,10 @@
                                 </span>
 
                                     <popover>
+                                        <template #itemName>
+                                            {{ supplement.text }}
+                                        </template>
+
                                         <template v-if="supplement.hasPopover">
                                             <div class="product-slider__img"><img
                                                     src="./img/popover-img.png"/></div>

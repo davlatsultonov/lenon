@@ -7,7 +7,7 @@
 
             <div class="popover__header">
                 <div class="option-block__title">
-                    Видео-инструкция
+                    Пример размеров
                 </div>
 
                 <div class="popover__close" @click="close">
