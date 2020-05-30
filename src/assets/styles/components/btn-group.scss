@@ -16,6 +16,11 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     margin-bottom: 12px;
+    transition: $btn-transition;
+
+    &:hover {
+      background-color: #eee;
+    }
 
     &:not(:last-child) {
       margin-right: 10px;
@@ -23,19 +28,6 @@
 
     &.smart-margin {
       margin-bottom: 0;
-    }
-
-    &.disabled{
-      pointer-events: none;
-      opacity: 0.5;
-
-      .popper {
-        display: none;
-      }
-
-      &:hover {
-        background-color: #ffffff;
-      }
     }
 
     &-text {

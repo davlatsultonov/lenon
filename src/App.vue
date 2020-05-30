@@ -526,14 +526,45 @@
 
                             <div class="option-block__content">
 
-                                <div class="container__column container__column_sm">
+                                <div class="container__column container__column_md">
 
                                     <div class="selection-result">
                                         <div class="option-block__title selection-result__title">
                                             Базовые свойства
                                         </div>
 
-                                        <div class="selection-result__column">
+                                        <table class="result-list">
+                                            <tr class="result-list__item">
+                                                <td>Фасон:</td>
+                                                <td>Прямое</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Цвет верха:</td>
+                                                <td>Графитовый</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Цвет юбки:</td>
+                                                <td>Горчичный</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Принт:</td>
+                                                <td>Без принта</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Цвет принта:</td>
+                                                <td>–</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Размер:</td>
+                                                <td>Выберите размер</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Длина платья:</td>
+                                                <td>–</td>
+                                            </tr>
+                                        </table>
+
+                                        <!--<div class="selection-result__column">
                                             <ul class="result-list">
                                                 <li class="result-list__item">Фасон:</li>
                                                 <li class="result-list__item">Цвет верха:</li>
@@ -558,7 +589,7 @@
                                                 <li class="result-list__item unselected">Выберите размер</li>
                                                 <li class="result-list__item">–</li>
                                             </ul>
-                                        </div>
+                                        </div>-->
                                     </div>
 
                                 </div>
@@ -571,7 +602,34 @@
                                             Индивидуальные размеры
                                         </div>
 
-                                        <div class="selection-result__column">
+                                        <table class="result-list">
+                                            <tr class="result-list__item">
+                                                <td>Длина платья до талии:</td>
+                                                <td>60 см</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Длина всего платья от плеча:</td>
+                                                <td>180 см</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Обхват груди:</td>
+                                                <td>92 см</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Обхват талии:</td>
+                                                <td>60 см</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Обхват бедер:</td>
+                                                <td>60 см</td>
+                                            </tr>
+                                            <tr class="result-list__item">
+                                                <td>Обхват руки:</td>
+                                                <td>–</td>
+                                            </tr>
+                                        </table>
+
+                                      <!--  <div class="selection-result__column">
                                             <ul class="result-list">
                                                 <li class="result-list__item">Длина платья до талии:</li>
                                                 <li class="result-list__item">Длина всего платья от плеча:</li>
@@ -591,7 +649,7 @@
                                                 <li class="result-list__item">60 см</li>
                                                 <li class="result-list__item">–</li>
                                             </ul>
-                                        </div>
+                                        </div>-->
                                     </div>
 
                                 </div>

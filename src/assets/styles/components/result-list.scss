@@ -1,8 +1,12 @@
 .result-list {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
 
   &__item {
+
+    td {
+      padding-right: 5px;
+    }
 
     &_color {
       display: inline-block;

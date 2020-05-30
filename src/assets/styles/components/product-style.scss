@@ -43,6 +43,11 @@
     cursor: pointer;
     padding-top: 4px;
     position: relative;
+    transition: $btn-transition;
+
+    &:hover:not(.product-style__link) {
+      background-color: rgba(238, 238, 238, 0.4117647058823529);
+    }
 
     &.active {
 

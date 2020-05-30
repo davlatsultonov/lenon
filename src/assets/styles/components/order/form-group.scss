@@ -1,12 +1,15 @@
 .form-group {
 
-  &__items-wrapper:not(:last-child) {
-    margin-bottom: 15px;
+  &__items-wrapper {
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   &__item {
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
     margin-right: 10px;
 
     &_lg {
