@@ -1,14 +1,9 @@
 .product-style {
 
   &_patterns {
-    height: 131px;
 
     .product-style__item {
        margin-bottom: 12px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
 
     .product-style__icon {
@@ -30,7 +25,7 @@
       cursor: pointer;
     }
 
-    &:not(:nth-child(5n)) {
+    &:not(:nth-child(3n)) {
       margin-right: 15px;
     }
   }

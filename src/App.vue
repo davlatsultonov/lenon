@@ -97,36 +97,17 @@
                             <div class="btn-group padding-top-7">
 
                                 <div class="btn-group__item"
-                                     v-for="(print, index) in printType.types" :key="index"
-                                     :class="{ active:  print === printType.currentType }">
-                                    <span @click="printType.currentType = print"
-                                          class="btn-group__item-text btn-group__item-text_sm">
-                                        {{ print }}
-                                    </span>
-                                </div>
+                                     v-for="(printItem, index) in printType.items" :key="index"
+                                     :class="{ active:  printItem.text === printType.currentType }">
 
-                            </div>
+                                    <span class="btn-group__item-text btn-group__item-text_sm"
+                                            @click="printType.currentType = printItem.text"
+                                    > {{ printItem.text }} </span>
 
-
-                            <div class="product-style  product-style_patterns">
-
-
-                                <div class="product-style__item" v-for="(pattern, index) in styles.patterns.type"
-                                     :key="pattern + index">
-                                    <button class="product-style__btn"
-                                            :class="{ active: pattern === styles.patterns.currentType }"
-                                            @click="styles.patterns.currentType = pattern">
-                                        <img class="product-style__icon" :src="getImgUrl(pattern)"
-                                        >
-                                    </button>
-                                </div>
-
-                                <div class="product-style__item">
-                                    <div class="product-style__btn product-style__link">
-                                        <a href="#" @click.prevent>еще <span>+10</span></a>
+                                    <div v-if="printItem.patterns != null">
+                                        <patterns-popover :patterns="printItem.patterns"></patterns-popover>
                                     </div>
                                 </div>
-
 
                             </div>
 
@@ -699,6 +680,7 @@
     import InfoPopover from './components/InfoPopover'
     import VideoPopover from './components/VideoPopover'
     import SizePopover from './components/SizePopover'
+    import PatternsPopover from './components/PatternsPopover'
     import Popover from './components/Popover'
 
     export default {
@@ -708,7 +690,8 @@
             'popover': Popover,
             'size-popover': SizePopover,
             'info-popover': InfoPopover,
-            'video-popover': VideoPopover
+            'video-popover': VideoPopover,
+            'patterns-popover': PatternsPopover
         },
         data() {
             return {
@@ -721,7 +704,26 @@
                     "hand-girth": '',
                 },
                 printType: {
-                    types: ['Без принта', 'До пояса', 'Полностью'],
+                    items: [
+                        {
+                            text: 'Без принта',
+                            patterns: null
+                        },
+                        {
+                            text: 'До пояса',
+                            patterns: {
+                                type: ['birds', 'deer', 'fox', 'horse', 'leaves', 'leaves-2', 'pattern', 'ship', 'whales'],
+                                currentType: ''
+                            }
+                        },
+                        {
+                            text: 'Полностью',
+                            patterns: {
+                                type: ['birds', 'deer', 'fox'],
+                                currentType: ''
+                            }
+                        }
+                     ],
                     currentType: ''
                 },
                 sizeType: {
@@ -756,11 +758,11 @@
                             {src: 'cutting', text: 'Отрезное'},
                         ],
                         currentType: ''
-                    },
+                    }/*,
                     patterns: {
                         type: ['birds', 'deer', 'fox', 'horse', 'leaves', 'leaves-2', 'pattern', 'ship', 'whales'],
                         currentType: ''
-                    }
+                    }*/
                 },
                 supplements: [
                     {text: 'Декоративный кармашек', hasPopover: false, checked: false},
